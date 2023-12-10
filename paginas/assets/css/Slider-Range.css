@@ -1,0 +1,106 @@
+
+#rangeValue{
+  position: relative;
+  text-align: center;
+  display: block;
+  font-size: 2em;
+}
+
+.rangeSlider{
+  height: 25px;
+  -webkit-appearance: none;
+  background: #cecece;
+  outline: none;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+input[type="range"]{
+  height: 25px;
+  -webkit-appearance: none;
+  background: #cecece;
+  outline: none;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.rangeSlider::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background: #213872;
+  cursor: pointer;
+  border: 4px solid #333;
+}
+
+input[type="range"]::-moz-range-thumb {
+  -webkit-appearance: none;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+
+#Red\ Bull input[type="range"]::-moz-range-thumb {
+  background: #213872;
+  border: 4px solid #ffffff;
+  box-shadow: -712px 0 0 700px #213872;
+}
+
+#Ferrari input[type="range"]::-moz-range-thumb {
+  background: #e30504;
+  border: 4px solid #ffffff;
+  box-shadow: -712px 0 0 700px #e30504;
+}
+
+#Mercedes input[type="range"]::-moz-range-thumb {
+  background: #04bfad;
+  border: 4px solid #ffffff;
+  box-shadow: -712px 0 0 700px #04bfad;
+}
+
+#McLaren input[type="range"]::-moz-range-thumb {
+  background: #f28f16;
+  border: 4px solid #ffffff;
+  box-shadow: -712px 0 0 700px #f28f16;
+}
+
+#Alpine input[type="range"]::-moz-range-thumb {
+  background: var(--bs-blue);
+  border: 4px solid #ffffff;
+  box-shadow: -712px 0 0 700px var(--bs-blue);
+}
+
+#Alfa\ Romeo input[type="range"]::-moz-range-thumb {
+  background: #a60303;
+  border: 4px solid #ffffff;
+  box-shadow: -712px 0 0 700px #a60303;
+}
+
+#Aston\ Martin input[type="range"]::-moz-range-thumb {
+  background: #035950;
+  border: 4px solid #ffffff;
+  box-shadow: -712px 0 0 700px #035950;
+}
+
+#AlphaTauri input[type="range"]::-moz-range-thumb {
+  background: #0c1d40;
+  border: 4px solid #ffffff;
+  box-shadow: -712px 0 0 700px #0c1d40;
+}
+
+#Williams input[type="range"]::-moz-range-thumb {
+  background: #1e90ff;
+  border: 4px solid #ffffff;
+  box-shadow: -712px 0 0 700px #1e90ff;
+}
+
+#Haas input[type="range"]::-moz-range-thumb {
+  background: var(--bs-gray);
+  border: 4px solid #ffffff;
+  box-shadow: -712px 0 0 700px var(--bs-gray);
+}
