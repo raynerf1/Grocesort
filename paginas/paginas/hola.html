@@ -1,0 +1,1093 @@
+
+<!DOCTYPE html>
+<!--Vista precio test-->
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Rayner</title>
+    <link rel="stylesheet" href="importedassets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="importedassets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="importedassets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="importedassets/css/Animated-Pretty-Product-List-v12-Animated-Pretty-Product-List.css">
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/styles.min.css">
+    <link rel="stylesheet" href="../assets/css/preloader.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <style>
+        .oculto {
+            display: none;
+        }
+                    .col-2 button:hover {
+                background-color: green;
+            }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-light fixed-top">
+            <div class="container-fluid">
+              <a class="navbar-brand">Grocesort</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <a class="nav-link" aria-current="page" href="secciones.php">Inicio</a>
+                  <a class="nav-link" href="">Patrocinadores</a>
+                  <a class="nav-link" href="">Precios</a>
+                  <a class="nav-link" href="">Privacidad</a>
+                  <a class="nav-link" href="">Sobre nosotros</a>
+                  
+</div>
+                                <a class="nav-link" href="carro.php">
+    <button type="button" class="btn btn-primary ml-5" >
+        Cesta<span class="badge text-bg-secondary">0</span>
+    </button>
+</a>
+              </div>
+            </div>
+          </nav>
+                    <br>
+          <div class="container-fluid ">
+            <nav class=" ms-5 mt-5 " aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="secciones.php">Secciones</a></li>
+                <li class="breadcrumb-item"><a href="javascript:void(0);" onclick="window.history.back();">Aceite</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Aceite oliva</li>
+                
+              </ol>
+              
+            </nav>
+          </div>
+    </header>
+        <div class="container-fluid">
+            <div class="row py-1 py-md-1">
+                <div class="col-12 col-sm-2">
+                    <h4 class="display-9">Filtros</h4>
+                    <div class="d-flex flex-sm-column flex-row flex-grow-1 align-items-center align-items-sm-start px-3 text-white" style=" padding: 10px 5px 5px 5px ;border-radius: 10px;  background-color: rgb(233, 233, 233);">
+                        <ul id="menu" class="nav nav-pills flex-sm-column flex-row flex-nowrap flex-shrink-1 flex-sm-grow-0 flex-grow-1 my-3 mb-sm-auto justify-content-center align-items-center align-items-sm-start w-100">
+
+                            <li class="w-100">
+                                <a class="px-2 nav-link px-sm-0 ps-2" href="#submenu1" data-bs-toggle="collapse">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-up" viewBox="0 0 16 16" onclick="invertirOrden()">
+                                    <path fill-rule="evenodd" d="M11.5 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L11 2.707V14.5a.5.5 0 0 0 .5.5zm-7-14a.5.5 0 0 1                                               .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V1.5a.5.5 0 0 1 .5-.5z"/>
+                                </svg>
+                                <span class="ms-1 d-none d-sm-inline" onclick="invertirOrden()">Invertir orden</span></a>
+                            </li>
+                            
+                            <li class="dropdown w-100"><a id="dropdown" class="dropdown-toggle px-1 nav-link px-sm-0 ps-2" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-shop" viewBox="0 0 16 16">
+        <path d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.371 2.371 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976l2.61-3.045zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0zM1.5 8.5A.5.5 0 0 1 2 9v6h1v-5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v5h6V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5zM4 15h3v-5H4v5zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-3zm3 0h-2v3h2v-3z"/>
+    </svg>
+    <span class="ms-1 d-none d-sm-inline">Supermercado</span>
+</a>
+                                <ul class="dropdown-menu dropdown-menu-light text-small shadow" aria-labelledby="dropdown">
+                                      <li>
+                                        <div class="form-check">
+                                          <input class="form-check-input ms-1"  type="checkbox" value="" id="ahorramascb" onclick='ocultarElementosPorClase("Ahorra Mas");'  checked>
+                                          <label class="form-check-label ms-1" for="flexCheckChecked"> Ahorra Mas</label>
+                                        </div>
+                                        </li>
+
+                                      <li>
+                                        <div class="form-check">
+                                          <input class="form-check-input ms-1"  type="checkbox" value="" id="alcampocb" onclick='ocultarElementosPorClase("Alcampo");' checked>
+                                          <label class="form-check-label ms-1" for="flexCheckChecked"> Alcampo</label>
+                                        </div>
+                                      </li>
+
+                                      <li>
+                                        <div class="form-check">
+                                          <input class="form-check-input ms-1"  type="checkbox" value="" id="carrefourcb" onclick='ocultarElementosPorClase("Carrefour");' checked>
+                                          <label class="form-check-label ms-1" for="flexCheckChecked"> Carrefour</label>
+                                        </div>
+                                      </li>
+
+                                      <li>
+                                        <div class="form-check">
+                                          <input class="form-check-input ms-1"  type="checkbox" value="" id="diacb" onclick='ocultarElementosPorClase("Dia");' checked>
+                                          <label class="form-check-label ms-1" for="flexCheckChecked"> Dia</label>
+                                        </div>
+                                      </li>
+
+                                      <li>
+                                        <div class="form-check">
+                                          <input class="form-check-input ms-1"  type="checkbox" value="" id="eroskicb" onclick='ocultarElementosPorClase("Eroski");' checked>
+                                          <label class="form-check-label ms-1" for="flexCheckChecked"> Eroski</label>
+                                        </div>
+                                      </li>                                      
+
+                                      <li>
+                                        <div class="form-check">
+                                          <input class="form-check-input ms-1"  type="checkbox" value="" id="mercadonacb" onclick='ocultarElementosPorClase("Mercadona");' checked>
+                                          <label class="form-check-label ms-1" for="flexCheckChecked"> Mercadona</label>
+                                        </div>
+                                      </li>
+                                      
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                </ul>
+                            </li>
+
+
+                             <li class="dropdown w-100"><a id="dropdown"                               class="dropdown-toggle px-1 nav-link px-sm-0 ps-2" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-columns-gap" viewBox="0 0 16 16">
+  <path d="M6 1v3H1V1h5zM1 0a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1H1zm14 12v3h-5v-3h5zm-5-1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1h-5zM6 8v7H1V8h5zM1 7a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1H1zm14-6v7h-5V1h5zm-5-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1h-5z"/>
+</svg>
+    <span class="ms-1 d-none d-sm-inline">Formato</span>
+</a>
+                                    <ul class="dropdown-menu dropdown-menu-light text-small shadow" aria-labelledby="dropdown">
+                                      <li>
+                                        <div class="form-check">
+                                          <input class="form-check-input ms-1"  type="checkbox" value="" id="cbBotella1L" onclick="ocultarBotella1L()"  checked>
+                                          <label class="form-check-label ms-1" for="flexCheckChecked"> Botella 1L</label>
+                                        </div>
+                                        </li>
+
+                                      <li>
+                                        <div class="form-check">
+                                          <input class="form-check-input ms-1"  type="checkbox" value="" id="cbGarrafa5L" onclick="ocultarGarrafa5L()" checked>
+                                          <label class="form-check-label ms-1" for="flexCheckChecked"> Garrafa 5L</label>
+                                        </div>
+                                      </li>
+
+                                      
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                </ul>
+                            </li>
+             <li class="dropdown w-100"><a id="dropdown" class="dropdown-toggle px-1 nav-link px-sm-0 ps-2" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-columns-gap" viewBox="0 0 16 16">
+  <path d="M6 1v3H1V1h5zM1 0a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1H1zm14 12v3h-5v-3h5zm-5-1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1h-5zM6 8v7H1V8h5zM1 7a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1H1zm14-6v7h-5V1h5zm-5-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1h-5z"/>
+</svg>
+    <span class="ms-1 d-none d-sm-inline">Tipo aceite</span>
+</a>
+<ul class="dropdown-menu dropdown-menu-light text-small shadow" aria-labelledby="dropdown">
+                                      <li>
+                                        <div class="form-check">
+                                          <input class="form-check-input ms-1"  type="checkbox" value="" id="cbAceite04" onclick='ocultarAceite04();'  checked>
+                                          <label class="form-check-label ms-1" for="flexCheckChecked"> Aceite 0,4</label>
+                                        </div>
+                                        </li>
+
+                                      <li>
+                                        <div class="form-check">
+                                          <input class="form-check-input ms-1"  type="checkbox" value="" id="cbAceite04" onclick='ocultarAceite1();'  checked>
+                                          <label class="form-check-label ms-1" for="flexCheckChecked"> Aceite 1</label>
+                                        </div>
+                                        </li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                </ul>
+                            </li>
+                                     <!--
+                            <li class="w-100"><a class="px-2 nav-link px-sm-0 ps-2" href="#"><i class="fa fa-th-large bi-grid fs-5 ms-2"></i><span class="ms-1 d-none d-sm-inline">Products</span></a></li>
+                            <li class="w-100"><a class="px-2 nav-link px-sm-0 ps-2" href="#"><i class="fa fa-group bi-people fs-5 ms-2"></i><span class="ms-1 d-none d-sm-inline">Customers</span></a></li>-->
+                        </ul>
+                        <div class="input-group d-none d-md-flex mt-3"><input class="form-control" type="text" placeholder="Search..."><button class="btn btn-primary" type="button"><i class="fa fa-search"></i></button></div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-9 col-sm-9">
+                    <div class="container">
+                    
+                        <div class="row product-list dev">
+                                                         
+                                <div id="41" class="col-sm-6 col-md-4 product-item animation-element slide-top-left Alcampo">
+                                <form method="POST" action="anadir_carro.php">
+                                <input type="hidden" name="idproducto" value="41">
+                                <div class="product-container Aceite-oliva-1l">
+                                    <div class="row" test="Aceite oliva">
+                                        <div class="col-md-12"><a class="product-image" href="#"><img src="https://www.compraonline.alcampo.es/images-v3/37ea0506-72ec-4543-93c8-a77bb916ec12/394d74ef-4d1c-473a-8a04-23e0ad4fc52f/500x500.jpg"></a></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <h2><a href="#">Aceite oliva 1l 0,4</a></h2>
+                                        </div>
+                                        <div class="col-4"><img src="..\imagenes\supermercados\iconos/alcampo.png" style="max-width: 100%;"></div>
+                                    </div>
+                                    <div class="product-rating"><a class="small-text" >(7,25  por litro) Alcampo</a></div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <p class="product-description" style="height: 40px;">PRODUCTO ALCAMPO Aceite de oliva suave 1 l.</p>
+                                            <div class="row">
+                                                <div class="col-6"><a href="https://www.compraonline.alcampo.es/products/PRODUCTO-ALCAMPO-Aceite-de-oliva-suave-1-l/19824" target="_blank" rel="noreferrer"><button class="btn btn-light" type="button">Comprar ahora</button></a></div>
+                                                <div class="col-6"><p class="product-price">7.25€</p></div>
+                                            </div>
+                                        </div>
+                                                                                <div class="col-12">
+                                            <div class="row">
+                                                <div class="col-2"><button class="btn btn-light" type="submit">+</button></div>
+                                            </div>
+                                        </div>                                    </div>
+                                </div>
+                            </div>
+                            </form>
+                                                                    
+                                <div id="465" class="col-sm-6 col-md-4 product-item animation-element slide-top-left Carrefour">
+                                <form method="POST" action="anadir_carro.php">
+                                <input type="hidden" name="idproducto" value="465">
+                                <div class="product-container Aceite-oliva-1l">
+                                    <div class="row" test="Aceite oliva">
+                                        <div class="col-md-12"><a class="product-image" href="#"><img src="https://static.carrefour.es/hd_510x_/img_pim_food/128215_00_1.jpg"></a></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <h2><a href="#">Aceite oliva 1l 0,4</a></h2>
+                                        </div>
+                                        <div class="col-4"><img src="..\imagenes\supermercados\iconos/carrefour.png" style="max-width: 100%;"></div>
+                                    </div>
+                                    <div class="product-rating"><a class="small-text" >7,25 /l Carrefour</a></div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <p class="product-description" style="height: 40px;">Aceite de oliva suave 0,4o Carrefour 1 l.</p>
+                                            <div class="row">
+                                                <div class="col-6"><a href="https://www.carrefour.es/supermercado/aceite-de-oliva-suave-04-carrefour-1-l/R-526600666/p" target="_blank" rel="noreferrer"><button class="btn btn-light" type="button">Comprar ahora</button></a></div>
+                                                <div class="col-6"><p class="product-price">7.25€</p></div>
+                                            </div>
+                                        </div>
+                                                                                <div class="col-12">
+                                            <div class="row">
+                                                <div class="col-2"><button class="btn btn-light" type="submit">+</button></div>
+                                            </div>
+                                        </div>                                    </div>
+                                </div>
+                            </div>
+                            </form>
+                                                                    
+                                <div id="467" class="col-sm-6 col-md-4 product-item animation-element slide-top-left Carrefour">
+                                <form method="POST" action="anadir_carro.php">
+                                <input type="hidden" name="idproducto" value="467">
+                                <div class="product-container Aceite-oliva-1l">
+                                    <div class="row" test="Aceite oliva">
+                                        <div class="col-md-12"><a class="product-image" href="#"><img src="https://static.carrefour.es/hd_510x_/img_pim_food/128222_00_1.jpg"></a></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <h2><a href="#">Aceite oliva 1l 1</a></h2>
+                                        </div>
+                                        <div class="col-4"><img src="..\imagenes\supermercados\iconos/carrefour.png" style="max-width: 100%;"></div>
+                                    </div>
+                                    <div class="product-rating"><a class="small-text" >7,25 /l Carrefour</a></div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <p class="product-description" style="height: 40px;">Aceite de oliva intenso 1o Carrefour 1 l.</p>
+                                            <div class="row">
+                                                <div class="col-6"><a href="https://www.carrefour.es/supermercado/aceite-de-oliva-intenso-1-carrefour-1-l/R-526600670/p" target="_blank" rel="noreferrer"><button class="btn btn-light" type="button">Comprar ahora</button></a></div>
+                                                <div class="col-6"><p class="product-price">7.25€</p></div>
+                                            </div>
+                                        </div>
+                                                                                <div class="col-12">
+                                            <div class="row">
+                                                <div class="col-2"><button class="btn btn-light" type="submit">+</button></div>
+                                            </div>
+                                        </div>                                    </div>
+                                </div>
+                            </div>
+                            </form>
+                                                                    
+                                <div id="984" class="col-sm-6 col-md-4 product-item animation-element slide-top-left Mercadona">
+                                <form method="POST" action="anadir_carro.php">
+                                <input type="hidden" name="idproducto" value="984">
+                                <div class="product-container Aceite-oliva-1l">
+                                    <div class="row" test="Aceite oliva">
+                                        <div class="col-md-12"><a class="product-image" href="#"><img src="https://prod-mercadona.imgix.net/images/1a84cd7052b68873985104ac24b87043.jpg?fit=crop&h=600&w=600"></a></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <h2><a href="#">Aceite oliva 1l 0,4</a></h2>
+                                        </div>
+                                        <div class="col-4"><img src="..\imagenes\supermercados\iconos/mercadona.png" style="max-width: 100%;"></div>
+                                    </div>
+                                    <div class="product-rating"><a class="small-text" >| 7,25 /L Mercadona</a></div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <p class="product-description" style="height: 40px;">Aceite de oliva 0,4o Hacendado</p>
+                                            <div class="row">
+                                                <div class="col-6"><a href="https://tienda.mercadona.es/product/4240/aceite-oliva-04o-hacendado-botella" target="_blank" rel="noreferrer"><button class="btn btn-light" type="button">Comprar ahora</button></a></div>
+                                                <div class="col-6"><p class="product-price">7.25€</p></div>
+                                            </div>
+                                        </div>
+                                                                                <div class="col-12">
+                                            <div class="row">
+                                                <div class="col-2"><button class="btn btn-light" type="submit">+</button></div>
+                                            </div>
+                                        </div>                                    </div>
+                                </div>
+                            </div>
+                            </form>
+                                                                    
+                                <div id="656" class="col-sm-6 col-md-4 product-item animation-element slide-top-left Dia">
+                                <form method="POST" action="anadir_carro.php">
+                                <input type="hidden" name="idproducto" value="656">
+                                <div class="product-container Aceite-oliva-1l">
+                                    <div class="row" test="Aceite oliva">
+                                        <div class="col-md-12"><a class="product-image" href="#"><img src="https://www.dia.es/product_images/104/104_ISO_0_ES.jpg?imwidth=392"></a></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <h2><a href="#">Aceite oliva 1l 0,4</a></h2>
+                                        </div>
+                                        <div class="col-4"><img src="..\imagenes\supermercados\iconos/dia.png" style="max-width: 100%;"></div>
+                                    </div>
+                                    <div class="product-rating"><a class="small-text" >(7,35 /LITRO) Dia</a></div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <p class="product-description" style="height: 40px;">Aceite de oliva suave La Almazara del Olivar botella 1 l</p>
+                                            <div class="row">
+                                                <div class="col-6"><a href="https://www.dia.es/aceites-salsas-y-especias/aceites/p/104?analytics_list_id=S0001&analytics_list_name=search&index=1" target="_blank" rel="noreferrer"><button class="btn btn-light" type="button">Comprar ahora</button></a></div>
+                                                <div class="col-6"><p class="product-price">7.35€</p></div>
+                                            </div>
+                                        </div>
+                                                                                <div class="col-12">
+                                            <div class="row">
+                                                <div class="col-2"><button class="btn btn-light" type="submit">+</button></div>
+                                            </div>
+                                        </div>                                    </div>
+                                </div>
+                            </div>
+                            </form>
+                                                                    
+                                <div id="825" class="col-sm-6 col-md-4 product-item animation-element slide-top-left Eroski">
+                                <form method="POST" action="anadir_carro.php">
+                                <input type="hidden" name="idproducto" value="825">
+                                <div class="product-container Aceite-oliva-1l">
+                                    <div class="row" test="Aceite oliva">
+                                        <div class="col-md-12"><a class="product-image" href="#"><img src="https://supermercado.eroski.es/images/377176.jpg"></a></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <h2><a href="#">Aceite oliva 1l 0,4</a></h2>
+                                        </div>
+                                        <div class="col-4"><img src="..\imagenes\supermercados\iconos/eroski.png" style="max-width: 100%;"></div>
+                                    </div>
+                                    <div class="product-rating"><a class="small-text" > Eroski</a></div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <p class="product-description" style="height: 40px;">Aceite de oliva 0,4o EROSKI, botella 1 litro</p>
+                                            <div class="row">
+                                                <div class="col-6"><a href="https://supermercado.eroski.es/es/productdetail/377176-aceite-de-oliva-04-eroski-botella-1-litro/" target="_blank" rel="noreferrer"><button class="btn btn-light" type="button">Comprar ahora</button></a></div>
+                                                <div class="col-6"><p class="product-price">7.35€</p></div>
+                                            </div>
+                                        </div>
+                                                                                <div class="col-12">
+                                            <div class="row">
+                                                <div class="col-2"><button class="btn btn-light" type="submit">+</button></div>
+                                            </div>
+                                        </div>                                    </div>
+                                </div>
+                            </div>
+                            </form>
+                                                                    
+                                <div id="244" class="col-sm-6 col-md-4 product-item animation-element slide-top-left Ahorra Mas">
+                                <form method="POST" action="anadir_carro.php">
+                                <input type="hidden" name="idproducto" value="244">
+                                <div class="product-container Aceite-oliva-1l">
+                                    <div class="row" test="Aceite oliva">
+                                        <div class="col-md-12"><a class="product-image" href="#"><img src="https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dwdfe28b73/Assets/084584_C1C1/large/7/4/d/5/74d53d1e572b5387e6791739c12ca04da543db68_084584_C1C1.jpg?sh=450"></a></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <h2><a href="#">Aceite oliva 1l 0,4</a></h2>
+                                        </div>
+                                        <div class="col-4"><img src="..\imagenes\supermercados\iconos/ahorramas.png" style="max-width: 100%;"></div>
+                                    </div>
+                                    <div class="product-rating"><a class="small-text" >(7,39/LITRO) Ahorra Mas</a></div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <p class="product-description" style="height: 40px;">Aceite de oliva Alipende 1l 0,4o</p>
+                                            <div class="row">
+                                                <div class="col-6"><a href="https://www.ahorramas.com/aceite-de-oliva-alipende-1l-04-84584.html" target="_blank" rel="noreferrer"><button class="btn btn-light" type="button">Comprar ahora</button></a></div>
+                                                <div class="col-6"><p class="product-price">7.39€</p></div>
+                                            </div>
+                                        </div>
+                                                                                <div class="col-12">
+                                            <div class="row">
+                                                <div class="col-2"><button class="btn btn-light" type="submit">+</button></div>
+                                            </div>
+                                        </div>                                    </div>
+                                </div>
+                            </div>
+                            </form>
+                                                                    
+                                <div id="246" class="col-sm-6 col-md-4 product-item animation-element slide-top-left Ahorra Mas">
+                                <form method="POST" action="anadir_carro.php">
+                                <input type="hidden" name="idproducto" value="246">
+                                <div class="product-container Aceite-oliva-1l">
+                                    <div class="row" test="Aceite oliva">
+                                        <div class="col-md-12"><a class="product-image" href="#"><img src="https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw40358e69/Assets/084579_C1C1/large/5/7/0/a/570a437ee49318d7454a4e3394fd207ccff5d6a5_084579_C1C1.jpg?sh=450"></a></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <h2><a href="#">Aceite oliva 1l 1</a></h2>
+                                        </div>
+                                        <div class="col-4"><img src="..\imagenes\supermercados\iconos/ahorramas.png" style="max-width: 100%;"></div>
+                                    </div>
+                                    <div class="product-rating"><a class="small-text" >(7,39/LITRO) Ahorra Mas</a></div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <p class="product-description" style="height: 40px;">Aceite de oliva Alipende 1l 1o</p>
+                                            <div class="row">
+                                                <div class="col-6"><a href="https://www.ahorramas.com/aceite-de-oliva-alipende-1l-1-84579.html" target="_blank" rel="noreferrer"><button class="btn btn-light" type="button">Comprar ahora</button></a></div>
+                                                <div class="col-6"><p class="product-price">7.39€</p></div>
+                                            </div>
+                                        </div>
+                                                                                <div class="col-12">
+                                            <div class="row">
+                                                <div class="col-2"><button class="btn btn-light" type="submit">+</button></div>
+                                            </div>
+                                        </div>                                    </div>
+                                </div>
+                            </div>
+                            </form>
+                                                                    
+                                <div id="658" class="col-sm-6 col-md-4 product-item animation-element slide-top-left Dia">
+                                <form method="POST" action="anadir_carro.php">
+                                <input type="hidden" name="idproducto" value="658">
+                                <div class="product-container Aceite-oliva-1l">
+                                    <div class="row" test="Aceite oliva">
+                                        <div class="col-md-12"><a class="product-image" href="#"><img src="https://www.dia.es/product_images/216284/216284_ISO_0_ES.jpg?imwidth=392"></a></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <h2><a href="#">Aceite oliva 1l 1</a></h2>
+                                        </div>
+                                        <div class="col-4"><img src="..\imagenes\supermercados\iconos/dia.png" style="max-width: 100%;"></div>
+                                    </div>
+                                    <div class="product-rating"><a class="small-text" >(8,25 /LITRO) Dia</a></div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <p class="product-description" style="height: 40px;">Aceite de oliva virgen La Almazara del Olivar botella 1 l</p>
+                                            <div class="row">
+                                                <div class="col-6"><a href="https://www.dia.es/aceites-salsas-y-especias/aceites/p/216284?analytics_list_id=S0001&analytics_list_name=search&index=3" target="_blank" rel="noreferrer"><button class="btn btn-light" type="button">Comprar ahora</button></a></div>
+                                                <div class="col-6"><p class="product-price">8.25€</p></div>
+                                            </div>
+                                        </div>
+                                                                                <div class="col-12">
+                                            <div class="row">
+                                                <div class="col-2"><button class="btn btn-light" type="submit">+</button></div>
+                                            </div>
+                                        </div>                                    </div>
+                                </div>
+                            </div>
+                            </form>
+                                                                    
+                                <div id="43" class="col-sm-6 col-md-4 product-item animation-element slide-top-left Alcampo">
+                                <form method="POST" action="anadir_carro.php">
+                                <input type="hidden" name="idproducto" value="43">
+                                <div class="product-container Aceite-oliva-1l">
+                                    <div class="row" test="Aceite oliva">
+                                        <div class="col-md-12"><a class="product-image" href="#"><img src="https://www.compraonline.alcampo.es/images-v3/37ea0506-72ec-4543-93c8-a77bb916ec12/d0ea45bc-365b-4288-92d8-a3bca6447a0e/500x500.jpg"></a></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <h2><a href="#">Aceite oliva 1l 1</a></h2>
+                                        </div>
+                                        <div class="col-4"><img src="..\imagenes\supermercados\iconos/alcampo.png" style="max-width: 100%;"></div>
+                                    </div>
+                                    <div class="product-rating"><a class="small-text" >(9,25  por litro) Alcampo</a></div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <p class="product-description" style="height: 40px;">PRODUCTO ALCAMPO Aceite de oliva virgen extra 1 l.</p>
+                                            <div class="row">
+                                                <div class="col-6"><a href="https://www.compraonline.alcampo.es/products/PRODUCTO-ALCAMPO-Aceite-de-oliva-virgen-extra-1-l/29834" target="_blank" rel="noreferrer"><button class="btn btn-light" type="button">Comprar ahora</button></a></div>
+                                                <div class="col-6"><p class="product-price">9.25€</p></div>
+                                            </div>
+                                        </div>
+                                                                                <div class="col-12">
+                                            <div class="row">
+                                                <div class="col-2"><button class="btn btn-light" type="submit">+</button></div>
+                                            </div>
+                                        </div>                                    </div>
+                                </div>
+                            </div>
+                            </form>
+                                                                    
+                                <div id="986" class="col-sm-6 col-md-4 product-item animation-element slide-top-left Mercadona">
+                                <form method="POST" action="anadir_carro.php">
+                                <input type="hidden" name="idproducto" value="986">
+                                <div class="product-container Aceite-oliva-1l">
+                                    <div class="row" test="Aceite oliva">
+                                        <div class="col-md-12"><a class="product-image" href="#"><img src="https://prod-mercadona.imgix.net/images/e19dbbdcfbd3e756081491ab7b676ffd.jpg?fit=crop&h=600&w=600"></a></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <h2><a href="#">Aceite oliva 1l 1</a></h2>
+                                        </div>
+                                        <div class="col-4"><img src="..\imagenes\supermercados\iconos/mercadona.png" style="max-width: 100%;"></div>
+                                    </div>
+                                    <div class="product-rating"><a class="small-text" >| 9,25 /L Mercadona</a></div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <p class="product-description" style="height: 40px;">Aceite de oliva virgen extra Hacendado</p>
+                                            <div class="row">
+                                                <div class="col-6"><a href="https://tienda.mercadona.es/product/4740/aceite-oliva-virgen-extra-hacendado-botella" target="_blank" rel="noreferrer"><button class="btn btn-light" type="button">Comprar ahora</button></a></div>
+                                                <div class="col-6"><p class="product-price">9.25€</p></div>
+                                            </div>
+                                        </div>
+                                                                                <div class="col-12">
+                                            <div class="row">
+                                                <div class="col-2"><button class="btn btn-light" type="submit">+</button></div>
+                                            </div>
+                                        </div>                                    </div>
+                                </div>
+                            </div>
+                            </form>
+                                                                    
+                                <div id="985" class="col-sm-6 col-md-4 product-item animation-element slide-top-left Mercadona">
+                                <form method="POST" action="anadir_carro.php">
+                                <input type="hidden" name="idproducto" value="985">
+                                <div class="product-container Aceite-oliva-5l">
+                                    <div class="row" test="Aceite oliva">
+                                        <div class="col-md-12"><a class="product-image" href="#"><img src="https://prod-mercadona.imgix.net/images/617bf49db3b4f79f5e311007e8cee4ab.jpg?fit=crop&h=600&w=600"></a></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <h2><a href="#">Aceite oliva 5l 0,4</a></h2>
+                                        </div>
+                                        <div class="col-4"><img src="..\imagenes\supermercados\iconos/mercadona.png" style="max-width: 100%;"></div>
+                                    </div>
+                                    <div class="product-rating"><a class="small-text" >| 7,20 /L Mercadona</a></div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <p class="product-description" style="height: 40px;">Aceite de oliva suave Hacendado</p>
+                                            <div class="row">
+                                                <div class="col-6"><a href="https://tienda.mercadona.es/product/4204/aceite-oliva-suave-hacendado-garrafa" target="_blank" rel="noreferrer"><button class="btn btn-light" type="button">Comprar ahora</button></a></div>
+                                                <div class="col-6"><p class="product-price">21.60€</p></div>
+                                            </div>
+                                        </div>
+                                                                                <div class="col-12">
+                                            <div class="row">
+                                                <div class="col-2"><button class="btn btn-light" type="submit">+</button></div>
+                                            </div>
+                                        </div>                                    </div>
+                                </div>
+                            </div>
+                            </form>
+                                                                    
+                                <div id="987" class="col-sm-6 col-md-4 product-item animation-element slide-top-left Mercadona">
+                                <form method="POST" action="anadir_carro.php">
+                                <input type="hidden" name="idproducto" value="987">
+                                <div class="product-container Aceite-oliva-5l">
+                                    <div class="row" test="Aceite oliva">
+                                        <div class="col-md-12"><a class="product-image" href="#"><img src="https://prod-mercadona.imgix.net/images/f59ef64a2984bb74e7bfa40270605438.jpg?fit=crop&h=600&w=600"></a></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <h2><a href="#">Aceite oliva 5l 1</a></h2>
+                                        </div>
+                                        <div class="col-4"><img src="..\imagenes\supermercados\iconos/mercadona.png" style="max-width: 100%;"></div>
+                                    </div>
+                                    <div class="product-rating"><a class="small-text" >| 9,20 /L Mercadona</a></div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <p class="product-description" style="height: 40px;">Aceite de oliva virgen extra Hacendado</p>
+                                            <div class="row">
+                                                <div class="col-6"><a href="https://tienda.mercadona.es/product/4717/aceite-oliva-virgen-extra-hacendado-garrafa" target="_blank" rel="noreferrer"><button class="btn btn-light" type="button">Comprar ahora</button></a></div>
+                                                <div class="col-6"><p class="product-price">27.60€</p></div>
+                                            </div>
+                                        </div>
+                                                                                <div class="col-12">
+                                            <div class="row">
+                                                <div class="col-2"><button class="btn btn-light" type="submit">+</button></div>
+                                            </div>
+                                        </div>                                    </div>
+                                </div>
+                            </div>
+                            </form>
+                                                                    
+                                <div id="42" class="col-sm-6 col-md-4 product-item animation-element slide-top-left Alcampo">
+                                <form method="POST" action="anadir_carro.php">
+                                <input type="hidden" name="idproducto" value="42">
+                                <div class="product-container Aceite-oliva-5l">
+                                    <div class="row" test="Aceite oliva">
+                                        <div class="col-md-12"><a class="product-image" href="#"><img src="https://www.compraonline.alcampo.es/images-v3/37ea0506-72ec-4543-93c8-a77bb916ec12/d2581722-1f31-492c-a332-742838a2d0bc/500x500.jpg"></a></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <h2><a href="#">Aceite oliva 5l 0,4</a></h2>
+                                        </div>
+                                        <div class="col-4"><img src="..\imagenes\supermercados\iconos/alcampo.png" style="max-width: 100%;"></div>
+                                    </div>
+                                    <div class="product-rating"><a class="small-text" >(7,18  por litro) Alcampo</a></div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <p class="product-description" style="height: 40px;">PRODUCTO ALCAMPO Aceite de oliva suave PRODUCTO ALCAMPO garrafa de 5 l.</p>
+                                            <div class="row">
+                                                <div class="col-6"><a href="https://www.compraonline.alcampo.es/products/PRODUCTO-ALCAMPO-Aceite-de-oliva-suave-PRODUCTO-ALCAMPO-garrafa-de-5-l/19827" target="_blank" rel="noreferrer"><button class="btn btn-light" type="button">Comprar ahora</button></a></div>
+                                                <div class="col-6"><p class="product-price">35.90€</p></div>
+                                            </div>
+                                        </div>
+                                                                                <div class="col-12">
+                                            <div class="row">
+                                                <div class="col-2"><button class="btn btn-light" type="submit">+</button></div>
+                                            </div>
+                                        </div>                                    </div>
+                                </div>
+                            </div>
+                            </form>
+                                                                    
+                                <div id="466" class="col-sm-6 col-md-4 product-item animation-element slide-top-left Carrefour">
+                                <form method="POST" action="anadir_carro.php">
+                                <input type="hidden" name="idproducto" value="466">
+                                <div class="product-container Aceite-oliva-5l">
+                                    <div class="row" test="Aceite oliva">
+                                        <div class="col-md-12"><a class="product-image" href="#"><img src="https://static.carrefour.es/hd_510x_/img_pim_food/128220_00_1.jpg"></a></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <h2><a href="#">Aceite oliva 5l 0,4</a></h2>
+                                        </div>
+                                        <div class="col-4"><img src="..\imagenes\supermercados\iconos/carrefour.png" style="max-width: 100%;"></div>
+                                    </div>
+                                    <div class="product-rating"><a class="small-text" >7,18 /l Carrefour</a></div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <p class="product-description" style="height: 40px;">Aceite de oliva suave 0,4o Carrefour garrafon 5 l.</p>
+                                            <div class="row">
+                                                <div class="col-6"><a href="https://www.carrefour.es/supermercado/aceite-de-oliva-suave-04-carrefour-garrafon-5-l/R-526600668/p" target="_blank" rel="noreferrer"><button class="btn btn-light" type="button">Comprar ahora</button></a></div>
+                                                <div class="col-6"><p class="product-price">35.90€</p></div>
+                                            </div>
+                                        </div>
+                                                                                <div class="col-12">
+                                            <div class="row">
+                                                <div class="col-2"><button class="btn btn-light" type="submit">+</button></div>
+                                            </div>
+                                        </div>                                    </div>
+                                </div>
+                            </div>
+                            </form>
+                                                                    
+                                <div id="468" class="col-sm-6 col-md-4 product-item animation-element slide-top-left Carrefour">
+                                <form method="POST" action="anadir_carro.php">
+                                <input type="hidden" name="idproducto" value="468">
+                                <div class="product-container Aceite-oliva-5l">
+                                    <div class="row" test="Aceite oliva">
+                                        <div class="col-md-12"><a class="product-image" href="#"><img src="https://static.carrefour.es/hd_510x_/img_pim_food/128225_00_1.jpg"></a></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <h2><a href="#">Aceite oliva 5l 1</a></h2>
+                                        </div>
+                                        <div class="col-4"><img src="..\imagenes\supermercados\iconos/carrefour.png" style="max-width: 100%;"></div>
+                                    </div>
+                                    <div class="product-rating"><a class="small-text" >7,18 /l Carrefour</a></div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <p class="product-description" style="height: 40px;">Aceite de oliva intenso 1o Carrefour garrafa 5 l.</p>
+                                            <div class="row">
+                                                <div class="col-6"><a href="https://www.carrefour.es/supermercado/aceite-de-oliva-intenso-1-carrefour-garrafa-5-l/R-526600672/p" target="_blank" rel="noreferrer"><button class="btn btn-light" type="button">Comprar ahora</button></a></div>
+                                                <div class="col-6"><p class="product-price">35.90€</p></div>
+                                            </div>
+                                        </div>
+                                                                                <div class="col-12">
+                                            <div class="row">
+                                                <div class="col-2"><button class="btn btn-light" type="submit">+</button></div>
+                                            </div>
+                                        </div>                                    </div>
+                                </div>
+                            </div>
+                            </form>
+                                                                    
+                                <div id="826" class="col-sm-6 col-md-4 product-item animation-element slide-top-left Eroski">
+                                <form method="POST" action="anadir_carro.php">
+                                <input type="hidden" name="idproducto" value="826">
+                                <div class="product-container Aceite-oliva-5l">
+                                    <div class="row" test="Aceite oliva">
+                                        <div class="col-md-12"><a class="product-image" href="#"><img src="https://supermercado.eroski.es/images/366666.jpg"></a></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <h2><a href="#">Aceite oliva 5l 0,4</a></h2>
+                                        </div>
+                                        <div class="col-4"><img src="..\imagenes\supermercados\iconos/eroski.png" style="max-width: 100%;"></div>
+                                    </div>
+                                    <div class="product-rating"><a class="small-text" > Eroski</a></div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <p class="product-description" style="height: 40px;">Aceite de oliva suave EROSKI, garrafa 5 litros</p>
+                                            <div class="row">
+                                                <div class="col-6"><a href="https://supermercado.eroski.es/es/productdetail/366666-aceite-de-oliva-suave-eroski-garrafa-5-litros/" target="_blank" rel="noreferrer"><button class="btn btn-light" type="button">Comprar ahora</button></a></div>
+                                                <div class="col-6"><p class="product-price">36.00€</p></div>
+                                            </div>
+                                        </div>
+                                                                                <div class="col-12">
+                                            <div class="row">
+                                                <div class="col-2"><button class="btn btn-light" type="submit">+</button></div>
+                                            </div>
+                                        </div>                                    </div>
+                                </div>
+                            </div>
+                            </form>
+                                                                    
+                                <div id="657" class="col-sm-6 col-md-4 product-item animation-element slide-top-left Dia">
+                                <form method="POST" action="anadir_carro.php">
+                                <input type="hidden" name="idproducto" value="657">
+                                <div class="product-container Aceite-oliva-5l">
+                                    <div class="row" test="Aceite oliva">
+                                        <div class="col-md-12"><a class="product-image" href="#"><img src="https://www.dia.es/product_images/49895/49895_ISO_0_ES.jpg?imwidth=392"></a></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <h2><a href="#">Aceite oliva 5l 0,4</a></h2>
+                                        </div>
+                                        <div class="col-4"><img src="..\imagenes\supermercados\iconos/dia.png" style="max-width: 100%;"></div>
+                                    </div>
+                                    <div class="product-rating"><a class="small-text" >(7,30 /LITRO) Dia</a></div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <p class="product-description" style="height: 40px;">Aceite de oliva suave La Almazara del Olivar garrafa 5 l</p>
+                                            <div class="row">
+                                                <div class="col-6"><a href="https://www.dia.es/aceites-salsas-y-especias/aceites/p/49895?analytics_list_id=S0001&analytics_list_name=search&index=6" target="_blank" rel="noreferrer"><button class="btn btn-light" type="button">Comprar ahora</button></a></div>
+                                                <div class="col-6"><p class="product-price">36.50€</p></div>
+                                            </div>
+                                        </div>
+                                                                                <div class="col-12">
+                                            <div class="row">
+                                                <div class="col-2"><button class="btn btn-light" type="submit">+</button></div>
+                                            </div>
+                                        </div>                                    </div>
+                                </div>
+                            </div>
+                            </form>
+                                                                    
+                                <div id="659" class="col-sm-6 col-md-4 product-item animation-element slide-top-left Dia">
+                                <form method="POST" action="anadir_carro.php">
+                                <input type="hidden" name="idproducto" value="659">
+                                <div class="product-container Aceite-oliva-5l">
+                                    <div class="row" test="Aceite oliva">
+                                        <div class="col-md-12"><a class="product-image" href="#"><img src="https://www.dia.es/product_images/107364/107364_ISO_0_ES.jpg?imwidth=392"></a></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <h2><a href="#">Aceite oliva 5l 1</a></h2>
+                                        </div>
+                                        <div class="col-4"><img src="..\imagenes\supermercados\iconos/dia.png" style="max-width: 100%;"></div>
+                                    </div>
+                                    <div class="product-rating"><a class="small-text" >(7,30 /LITRO) Dia</a></div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <p class="product-description" style="height: 40px;">Aceite de oliva intenso La Almazara del Olivar garrafa 5 l</p>
+                                            <div class="row">
+                                                <div class="col-6"><a href="https://www.dia.es/aceites-salsas-y-especias/aceites/p/107364?analytics_list_id=S0001&analytics_list_name=search&index=4" target="_blank" rel="noreferrer"><button class="btn btn-light" type="button">Comprar ahora</button></a></div>
+                                                <div class="col-6"><p class="product-price">36.50€</p></div>
+                                            </div>
+                                        </div>
+                                                                                <div class="col-12">
+                                            <div class="row">
+                                                <div class="col-2"><button class="btn btn-light" type="submit">+</button></div>
+                                            </div>
+                                        </div>                                    </div>
+                                </div>
+                            </div>
+                            </form>
+                                                                    
+                                <div id="245" class="col-sm-6 col-md-4 product-item animation-element slide-top-left Ahorra Mas">
+                                <form method="POST" action="anadir_carro.php">
+                                <input type="hidden" name="idproducto" value="245">
+                                <div class="product-container Aceite-oliva-5l">
+                                    <div class="row" test="Aceite oliva">
+                                        <div class="col-md-12"><a class="product-image" href="#"><img src="https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw4c7d9635/Assets/084585_C1C1/large/8/8/2/b/882ba14ffd710a258424b8a572f2dbff3e5d0948_084585_C1C1.jpg?sh=450"></a></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <h2><a href="#">Aceite oliva 5l 0,4</a></h2>
+                                        </div>
+                                        <div class="col-4"><img src="..\imagenes\supermercados\iconos/ahorramas.png" style="max-width: 100%;"></div>
+                                    </div>
+                                    <div class="product-rating"><a class="small-text" >(7,35/LITRO) Ahorra Mas</a></div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <p class="product-description" style="height: 40px;">Aceite de oliva Alipende garrafa 5l 0,4o</p>
+                                            <div class="row">
+                                                <div class="col-6"><a href="https://www.ahorramas.com/aceite-de-oliva-alipende-garrafa-5l-04-84585.html" target="_blank" rel="noreferrer"><button class="btn btn-light" type="button">Comprar ahora</button></a></div>
+                                                <div class="col-6"><p class="product-price">36.75€</p></div>
+                                            </div>
+                                        </div>
+                                                                                <div class="col-12">
+                                            <div class="row">
+                                                <div class="col-2"><button class="btn btn-light" type="submit">+</button></div>
+                                            </div>
+                                        </div>                                    </div>
+                                </div>
+                            </div>
+                            </form>
+                                                                    
+                                <div id="247" class="col-sm-6 col-md-4 product-item animation-element slide-top-left Ahorra Mas">
+                                <form method="POST" action="anadir_carro.php">
+                                <input type="hidden" name="idproducto" value="247">
+                                <div class="product-container Aceite-oliva-5l">
+                                    <div class="row" test="Aceite oliva">
+                                        <div class="col-md-12"><a class="product-image" href="#"><img src="https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw12a5f4e2/Assets/084580_C1C1/large/b/4/4/1/b441aab86fadc6b0af57f49e0bfc8f00e2948522_084580_C1C1.jpg?sh=450"></a></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <h2><a href="#">Aceite oliva 5l 1</a></h2>
+                                        </div>
+                                        <div class="col-4"><img src="..\imagenes\supermercados\iconos/ahorramas.png" style="max-width: 100%;"></div>
+                                    </div>
+                                    <div class="product-rating"><a class="small-text" >(7,35/LITRO) Ahorra Mas</a></div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <p class="product-description" style="height: 40px;">Aceite de oliva Alipende garrafa 5l 1o</p>
+                                            <div class="row">
+                                                <div class="col-6"><a href="https://www.ahorramas.com/aceite-de-oliva-alipende-garrafa-5l-1-84580.html" target="_blank" rel="noreferrer"><button class="btn btn-light" type="button">Comprar ahora</button></a></div>
+                                                <div class="col-6"><p class="product-price">36.75€</p></div>
+                                            </div>
+                                        </div>
+                                                                                <div class="col-12">
+                                            <div class="row">
+                                                <div class="col-2"><button class="btn btn-light" type="submit">+</button></div>
+                                            </div>
+                                        </div>                                    </div>
+                                </div>
+                            </div>
+                            </form>
+                                                                    
+                                <div id="827" class="col-sm-6 col-md-4 product-item animation-element slide-top-left Eroski">
+                                <form method="POST" action="anadir_carro.php">
+                                <input type="hidden" name="idproducto" value="827">
+                                <div class="product-container Aceite-oliva-5l">
+                                    <div class="row" test="Aceite oliva">
+                                        <div class="col-md-12"><a class="product-image" href="#"><img src="https://supermercado.eroski.es/images/377093.jpg"></a></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <h2><a href="#">Aceite oliva 5l 1</a></h2>
+                                        </div>
+                                        <div class="col-4"><img src="..\imagenes\supermercados\iconos/eroski.png" style="max-width: 100%;"></div>
+                                    </div>
+                                    <div class="product-rating"><a class="small-text" > Eroski</a></div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <p class="product-description" style="height: 40px;">Aceite de oliva sabor EROSKI, garrafa 5 litros</p>
+                                            <div class="row">
+                                                <div class="col-6"><a href="https://supermercado.eroski.es/es/productdetail/377093-aceite-de-oliva-sabor-eroski-garrafa-5-litros/" target="_blank" rel="noreferrer"><button class="btn btn-light" type="button">Comprar ahora</button></a></div>
+                                                <div class="col-6"><p class="product-price">36.95€</p></div>
+                                            </div>
+                                        </div>
+                                                                                <div class="col-12">
+                                            <div class="row">
+                                                <div class="col-2"><button class="btn btn-light" type="submit">+</button></div>
+                                            </div>
+                                        </div>                                    </div>
+                                </div>
+                            </div>
+                            </form>
+                                                                    
+                                <div id="44" class="col-sm-6 col-md-4 product-item animation-element slide-top-left Alcampo">
+                                <form method="POST" action="anadir_carro.php">
+                                <input type="hidden" name="idproducto" value="44">
+                                <div class="product-container Aceite-oliva-5l">
+                                    <div class="row" test="Aceite oliva">
+                                        <div class="col-md-12"><a class="product-image" href="#"><img src="https://www.compraonline.alcampo.es/images-v3/37ea0506-72ec-4543-93c8-a77bb916ec12/abe5d579-1f3b-46cd-a9bc-cbfade6305b9/500x500.jpg"></a></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <h2><a href="#">Aceite oliva 5l 1</a></h2>
+                                        </div>
+                                        <div class="col-4"><img src="..\imagenes\supermercados\iconos/alcampo.png" style="max-width: 100%;"></div>
+                                    </div>
+                                    <div class="product-rating"><a class="small-text" >(9,18  por litro) Alcampo</a></div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <p class="product-description" style="height: 40px;">PRODUCTO ALCAMPO Aceite de oliva virgen extra garrafa de 5 l.</p>
+                                            <div class="row">
+                                                <div class="col-6"><a href="https://www.compraonline.alcampo.es/products/PRODUCTO-ALCAMPO-Aceite-de-oliva-virgen-extra-garrafa-de-5-l/29848" target="_blank" rel="noreferrer"><button class="btn btn-light" type="button">Comprar ahora</button></a></div>
+                                                <div class="col-6"><p class="product-price">45.90€</p></div>
+                                            </div>
+                                        </div>
+                                                                                <div class="col-12">
+                                            <div class="row">
+                                                <div class="col-2"><button class="btn btn-light" type="submit">+</button></div>
+                                            </div>
+                                        </div>                                    </div>
+                                </div>
+                            </div>
+                            </form>
+                                                                <!--
+-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/Animated-Pretty-Product-List-v12-Animated-Pretty-Product-List.js"></script>
+
+    <footer id="footer" class="text-center bg-dark">
+        <div class="container text-white py-4 py-lg-5">
+            <ul class="list-inline">
+                <li class="list-inline-item me-4"><a class="link-light" href="/CRUD/login.php">Login</a></li>
+                <li class="list-inline-item"><a class="link-light" href="privacidad.html">Política de privacidad</a></li>
+            </ul>
+            <p class="text-muted mb-0">Desarrollado por Rayner Gabú<br>GroceSort<br>©2023&nbsp;</p>
+        </div>
+
+    </footer>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+<script>
+var elementosOcultadosPorClase = [];
+
+var elementosOcultadosPorClaseAdicional = [];
+
+function ocultarElementosPorClase(clase) {
+  var elementos = document.getElementsByClassName(clase);
+  for (var i = 0; i < elementos.length; i++) {
+    if (elementos[i].style.display === "none") {
+      // Muestra el elemento si está oculto
+      elementos[i].style.display = "block";
+      // Elimina el elemento de la lista de elementos ocultados
+      var index = elementosOcultadosPorClase.indexOf(elementos[i]);
+      if (index > -1) {
+        elementosOcultadosPorClase.splice(index, 1);
+      }
+      // Elimina el elemento de la lista de elementos ocultados por clase adicional
+      var indexAdicional = elementosOcultadosPorClaseAdicional.indexOf(elementos[i]);
+      if (indexAdicional > -1) {
+        elementosOcultadosPorClaseAdicional.splice(indexAdicional, 1);
+      }
+    } else {
+      elementos[i].style.display = "none";
+      elementosOcultadosPorClase.push(elementos[i]);
+    }
+  }
+}
+
+
+window.onload = function() {
+    var checkboxes = ["ahorramascb", "alcampocb", "carrefourcb", "diacb", "eroskicb", "mercadonacb"];
+    checkboxes.forEach(function(id) {
+        var checkbox = document.getElementById(id);
+        checkbox.checked = true; 
+    });
+};
+
+    function invertirOrden() {
+        // Obtiene los elementos con la clase "product-item"
+        var productItems = document.getElementsByClassName("product-item");
+        // Convierte la colección de elementos en un array
+        var productItemsArray = Array.from(productItems);
+        // Invierte el orden del array
+        productItemsArray.reverse();
+        // Elimina los elementos originales del DOM
+        for (var i = 0; i < productItems.length; i++) {
+            productItems[i].remove();
+        }
+        // Agrega los elementos en el nuevo orden al DOM
+        var container = document.querySelector(".row.product-list");
+        for (var i = 0; i < productItemsArray.length; i++) {
+            container.appendChild(productItemsArray[i]);
+        }
+    }
+        function ocultarBotella1L (){
+    var elementos1L = document.getElementsByClassName("Aceite-oliva-1l");
+    for (var i = 0; i < elementos1L.length; i++) {
+        if(elementos1L[i].style.display ==="none"){
+            elementos1L[i].style.display = "block";
+        } else{
+            elementos1L[i].style.display = "none";
+            }
+    }
+}
+    function ocultarGarrafa5L (){
+    var elementos1L = document.getElementsByClassName("Aceite-oliva-5l");
+    for (var i = 0; i < elementos1L.length; i++) {
+        if(elementos1L[i].style.display ==="none"){
+            elementos1L[i].style.display = "block";
+        } else{
+            elementos1L[i].style.display = "none";
+            }
+    }
+}
+
+
+function ocultarAceite04() {
+  // Selecciona todos los elementos h2
+  var elementosH2 = document.querySelectorAll("h2 a");
+  // Recorre los elementos h2 y verifica si contienen el texto "Aceite oliva 1l 0,4" o "Aceite oliva 5l 0,4"
+  elementosH2.forEach(function (elementoH2) {
+    var texto = elementoH2.textContent;
+    if (texto.includes('Aceite oliva 1l 0,4') || texto.includes('Aceite oliva 5l 0,4')) {
+      // Encuentra el elemento "product-item" más cercano al elemento h2
+      var productItem = elementoH2.closest(".product-item");
+      if (productItem) {
+        // Verifica si el elemento está en la lista de elementos ocultados por clase adicional
+        if (elementosOcultadosPorClaseAdicional.includes(productItem)) {
+          // No hagas nada si ya está oculto por ocultarAceite04
+        } else {
+          // Verifica si el elemento está en la lista de elementos ocultados por clase
+          if (elementosOcultadosPorClase.includes(productItem)) {
+            // No hagas nada si ya está oculto por ocultarElementosPorClase
+          } else {
+            // Verifica si el elemento está oculto
+            if (productItem.style.display === "none") {
+              // Muestra el elemento
+              productItem.style.display = "block";
+            } else {
+              // Oculta el elemento si no está oculto
+              productItem.style.display = "none";
+              // Agrega el elemento a la lista de elementos ocultados por clase adicional
+              elementosOcultadosPorClaseAdicional.push(productItem);
+            }
+          }
+        }
+      }
+    }
+  });
+}
+
+function ocultarAceite1() {
+  // Selecciona todos los elementos h2
+  var elementosH2 = document.querySelectorAll("h2 a");
+  // Recorre los elementos h2 y verifica si contienen el texto "Aceite oliva 1l 1" o "Aceite oliva 5l 1"
+  elementosH2.forEach(function (elementoH2) {
+    var texto = elementoH2.textContent;
+    if (texto.includes('Aceite oliva 1l 1') || texto.includes('Aceite oliva 5l 1')) {
+      // Encuentra el elemento "product-item" más cercano al elemento h2
+      var productItem = elementoH2.closest(".product-item");
+      if (productItem) {
+        // Verifica si el elemento está en la lista de elementos ocultados por clase adicional
+        if (elementosOcultadosPorClaseAdicional.includes(productItem)) {
+          // No hagas nada si ya está oculto por ocultarAceite04
+        } else {
+          // Verifica si el elemento está en la lista de elementos ocultados por clase
+          if (elementosOcultadosPorClase.includes(productItem)) {
+            // No hagas nada si ya está oculto por ocultarElementosPorClase
+          } else {
+            // Verifica si el elemento está oculto
+            if (productItem.style.display === "none") {
+              // Muestra el elemento
+              productItem.style.display = "block";
+            } else {
+              // Oculta el elemento si no está oculto
+              productItem.style.display = "none";
+              // Agrega el elemento a la lista de elementos ocultados por clase adicional
+              elementosOcultadosPorClaseAdicional.push(productItem);
+            }
+          }
+        }
+      }
+    }
+  });
+}
+</script>
+     
+</body>
+</html>

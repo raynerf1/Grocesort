@@ -1,0 +1,408 @@
+<html>
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Rayner Gabu</title>
+  <!--Etiqueta <head> para bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+<body>
+
+  <!--Menú de la página-->
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a href="index.html">
+          <img src="home_white_24dp.svg" href="landing.html" alt="...">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link" href="#experiencia">Experiencia laboral</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#habilidades">Habilidades</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#formacion">Formación académica</a>
+            </li>
+          </ul>
+          <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    Más sobre mi...
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    <li><a class="dropdown-item" href="proyectos.html">Mis proyectos</a></li>
+  </ul>
+</div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container-fluid">
+
+    <!--Carrusel-->
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="landimg.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="landimg2.jpg" class="d-block w-100" alt="...">
+        </div>
+      </div>
+    </div>
+
+    <!--Cuerpo de la página-->
+    <div class="container ps-5">
+      <!-- Presentacion personal-->
+      <hr class="featurette-divider">
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h3 class="featurette-heading">Rayner Gabu</h3>
+          <h4 span class="text-muted">Presentacion</h4>
+          <p class="lead">Soy Rayner, un apasionado de la informática con conocimentos en hardware, software y redes.
+            <br>
+            Soy un apasionado las artes gráficas, me encanta el diseño fotográfico, el diseño de interfaces, el diseño y
+            representación de ilustraciones la edición de vídeo y el retoque de diseños 3D .</p>
+        </div>
+        <div class="col-md-5">
+          <img src="img1.jpg" alt="" class="img-fluid">
+        </div>
+      </div>
+      <!-- Experiencia laboral-->
+      <hr class="featurette-divider">
+      <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+          <h3 class="featurette-heading" id="experiencia">Experiencia laboral.</h3>
+          <p class="lead">Funciones desempeñadas en el ámbito profesional</p>
+          <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                  Quiron Prevención: Técnico informático
+                </button>
+              </h2>
+              <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  <h6>Duración</h6>
+                  <p>16 meses</p>
+                  <h6>Tareas desempeñadas</h6>
+                  <p>-Análisis y diagnóstico de estado del equipamiento informático <br>
+                    -Instalación, preparación y mantenimiento de equipos informáticos <br>
+                    -Resolución de incidencias de equipamiento informático<br>
+                    -Configuración, preparación y mantenimiento de redes.</p>
+                  <div class="alert alert-info" role="alert">
+                    9 meses de esta actividad se desarrollaron como formación de prácticas
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                  Crownet Sistemas: Desarrollo Fullstack ASP.NET
+                </button>
+              </h2>
+              <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  <h6>Duración</h6>
+                  <p>3 meses</p>
+                  <h6>Tareas desempeñadas</h6>
+                  <p>
+                    -Instalación, preparación, configuracion y mantenimiento de equipos informáticos <br>
+                  </p>
+                  <div class="alert alert-info" role="alert">
+                    Meses realizados en prácticas
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-5 order-md-1">
+          <img src="img2.jpg" alt="" class="img-fluid">
+        </div>
+      </div>
+      <!--Habilidades-->
+      <hr class="featurette-divider">
+      <div class="row featurette">
+        <div class="col-md-6">
+          <h3 class="featurette-heading" id="habilidades">Habilidades</h3>
+ <!--HTML-->
+          <div class="row">
+            <div class="col-2">
+              <img src="iconos/html5.png" width="85%" alt="" class="img-fluid">
+            </div>
+            <div class="col-10">
+              <h4>HTML5</h4>
+              <p>HTML es el componente más importante y básico de cualquier página Web. Define el significado y la estructura del contenido.</p>
+            </div>
+          </div>
+ <!--css-->
+          <div class="row">
+            <div class="col-2">
+              <img src="iconos/css.png" width="85%" alt="" class="img-fluid">
+            </div>
+            <div class="col-10">
+              <h4>CSS</h4>
+              <p>CSS es el componente de las páginas web que permite darle estilo posicionando los elementos, eligiendo fuentes, colores, fondos y formas.</p>
+            </div>
+          </div>
+ <!--Javascript-->
+          <div class="row">
+            <div class="col-2">
+              <img src="iconos/js.png" width="85%" alt="" class="img-fluid">
+            </div>
+            <div class="col-10">
+              <h4>JavaScript</h4>
+              <p>JavaScript es el componente de las páginas web que dota a las páginas de comportamientos dinámicos e inteligentes.</p>
+            </div>
+          </div>
+ <!--Bootstrap-->
+          <div class="row">
+            <div class="col-2">
+              <img src="iconos/bs.png" width="85%" alt="" class="img-fluid">
+            </div>
+            <div class="col-10">
+              <h4>Bootstrap</h4>
+              <p>BootStrap es un framework para desarrollar aplicaciones web.</p>
+            </div>
+          </div>
+ <!--Photoshop-->
+          <div class="row">
+            <div class="col-2">
+              <img src="iconos/ps.png" width="85%" alt="" class="img-fluid">
+            </div>
+            <div class="col-10">
+              <h4>Adobe Photoshop</h4>
+              <p>Photoshop es una aplicación para crear, editar y retorcar imágenes</p>
+            </div>
+          </div>
+ <!--Office-->
+          <div class="row">
+            <div class="col-2">
+              <img src="iconos/office.png" width="85%" alt="" class="img-fluid">
+            </div>
+            <div class="col-10">
+              <h4>Microsoft Office</h4>
+              <p>Microsoft Office es una suite de ofimática que permite desempeñar varias tareas de oficina</p>
+            </div>
+          </div>
+ <!--Java-->
+        </div>
+        <div class="col-md-6 py-5">
+          <div class="row">
+            <div class="col-2">
+              <img src="iconos/java.png" width="85%" alt="" class="img-fluid">
+            </div>
+            <div class="col-10">
+              <h4>Java</h4>
+              <p>Java es un lenguaje de programación, se utiliza para multiples aplicaciones y sitios web, puede funcionar en casi cualquier dispositivo </p>
+            </div>
+ <!--MySQL-->
+            <div class="col-2">
+              <img src="iconos/mysql.png" width="85%" alt="" class="img-fluid">
+            </div>
+            <div class="col-10">
+              <h4>MySQL</h4>
+              <p>MySQL es un sistema de gestión de bases de datos  </p>
+            </div>
+ <!--XML-->
+            <div class="col-2 py-4">
+              <img src="iconos/xml.png" width="85%" alt="" class="img-fluid">
+            </div>
+            <div class="col-10 py-2">
+              <h4>XML y XML Schema</h4>
+              <p>XML es un lenguaje de marcado. <br> XML Schema es un lenguaje que permite definir la estructura de un documento XML </p>
+            </div>
+ <!--DTD-->
+            <div class="col-2 ">
+              <img src="iconos/dtd.png" width="85%" alt="" class="img-fluid">
+            </div>
+            <div class="col-10">
+              <h4>DTD</h4>
+              <p>DTD es un lenguaje de marcado.</p>
+            </div>
+ <!--Premiere-->
+            <div class="col-2">
+              <img src="iconos/premiere.png" width="85%" alt="" class="img-fluid">
+            </div>
+            <div class="col-10">
+              <h4>Adobe Premiere</h4>
+              <p>Premiere es un software para composición y edición de contenido multimedia.</p>
+            </div>
+ 
+
+          </div>
+        </div>
+      <!--Formación academica-->
+      <hr class="featurette-divider">
+      <div class="row featurette">
+        <div class="col">
+          <h3 class="featurette-heading" id="formacion">Formación academica.</h3>
+          <p>Usa los botones para obtener más detalles sobre mi formación.</p>
+           <!--Botoes-->
+            <button class="btn btn-primary p-1" type="button" data-bs-toggle="collapse" data-bs-target="#dam" aria-expanded="false" aria-controls="collapseExample2">
+              Desarrollo de Aplicaciones Multiplataforma
+            </button>
+            <button class="btn btn-primary p-1" type="button" data-bs-toggle="collapse" data-bs-target="#smr" aria-expanded="false" aria-controls="collapseExample2">
+              Sistemas Microinformáticos y Redes
+            </button>
+            <button class="btn btn-primary p-1" type="button" data-bs-toggle="collapse" data-bs-target="#cambridge" aria-expanded="false" aria-controls="collapseExample2">
+              Cambridge English B2
+            </button>
+            <button class="btn btn-primary p-1" type="button" data-bs-toggle="collapse" data-bs-target="#cisco" aria-expanded="false" aria-controls="collapseExample2">
+              Cisco Certified Network Academy
+            </button>
+            <button class="btn btn-primary p-1" type="button" data-bs-toggle="collapse" data-bs-target="#eso" aria-expanded="false" aria-controls="collapseExample2">
+              ESO
+            </button>
+           <!--Texto de botones-->
+          <div class="collapse" id="dam">
+            <div class="card card-body">
+              <h5>Desarrollo de Aplicaciones Multiplataforma</h5>
+              <div class="alert alert-primary" role="alert">
+                Colegio Santa María de los Apostoles
+                <br>2021-2023
+              </div>
+              <p>
+              El Ciclo Formativo de Grado Superior de Aplicaciones Multiplataforma permite tener conocimientos en múltiples 
+              ambitos de la informática como el desarrollo de aplicaciones, páginas web, servicios y bases de datos.</p>
+              <br>
+              <p class="text-muted">
+              Estudiar este ciclo formativo te forma en lo siguiente:
+              Gestión de bases de datos,gestión sistemas de información, gestión y configuración de entornos 
+              de desarollo.</p>
+              <br>
+              <p>
+              Desarrollo de aplicaciones multiplataforma, multiproceso y multihilo, aplicaciones móviles,
+              interfaces gráficas, páginas web, componentes visuales e integración de aplicaciones con bases de datos </p>
+
+              <div class="alert alert-info" role="alert">
+                Estos estudios aún están en desarrollo
+              </div>
+            </div>
+          </div>
+
+          <div class="collapse" id="smr">
+            <div class="card card-body">
+              <h5>Sistemas Microinformáticos y Redes</h5>
+              <div class="alert alert-primary" role="alert">
+                Colegio Santa María de los Apostoles
+                <br>2019-2021
+              </div>
+              <p>
+              El Ciclo Formativo de Grado Medio de Sistemas Microinformáticos y Redes te forma en la instalación, configuración
+              y mantenimiento de software, aplicaciones y servicios en equipos informáticos, dispositivos electrónicos y redes.
+              <br> 
+              </p>
+              <p class="text-muted">Montaje y preparación de ordenadores, periféricos, realización de diagnósticos en equipamiento electrónico con fallos,
+                desmontaje, resolución y reparación de los mismos. <br>
+              </p>
+              <p>
+                Ejecución de procedimientos establecidos para recuperar datos y aplicaciones ante fallos de sistemas.
+                Elaboración de documentación técnica para equipos informáticos, elaboración de presupuestos y asesoramiento informático
+                <br>
+              </p>
+              <p class="text-muted">Diseño, configuración, implementación y cableado de redes informáticas.</p>
+            </div>
+          </div>
+
+          <div class="collapse" id="cambridge">
+            <div class="card card-body">
+              <h5>Cambridge English B2</h5>
+              <div class="alert alert-primary" role="alert">
+                2018
+                <br>Nivel: B2
+              </div>
+              El B2 o First es un certificado otorgado por la Universidad de Cambridge que certifica que las personas
+              con este título tienen habilidades lingüisticas (escucha,habla y escriura) aptas para vivir y trabajar en países de habla inglesa o lugares
+              cuyas las actividades se desarrollan en inglés  
+            </div>
+          </div>
+
+          <div class="collapse" id="cisco">
+            <div class="card card-body">
+              <h5>Cisco Certified Network Academy</h5>
+              <div class="alert alert-primary" role="alert">
+                Colegio Santa María de los Apostoles
+                <br>2019
+                <br>Nivel: CCNA1
+              </div>
+              <p>
+                La Cisco Networking Academy es un programa de formación en redes, implementación de redes y ciberseguridad.
+              Uno de los certificados otorgados por Cisco es el CCNA, que valida el conocimiento de implementación de redes
+              en las empresas más conocidas del planeta.
+              </p>
+            </div>
+          </div>
+
+          <div class="collapse" id="eso">
+            <div class="card card-body">
+              <h5>Educación Secundaria Obligatoria</h5>
+              <div class="alert alert-primary" role="alert">
+                2014-2018 
+              </div>
+              <p>
+              La Educación Secundaria Obligatoria (ESO) tiene como objetivo preparar la base en varias materias a los alumnos de entre 12 y 16 años para sus próximos estudios a nivel superior.
+              <br> Entre las más importantes se incluyen matemáticas, lengua, ciencias, física, química , geografía, historia e inglés</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="featurette-divider">    
+      </div>
+    </div>
+  </div>
+  </div>
+<!--Pie de página -->
+<footer>
+  <div class="container-fluid px-12 py-3 bg-dark text text-white" id="icon-grid">
+    <h2 class="pb-2 border-bottom"></h2>
+    <div class="d-flex justify-content-center">
+    <!--Boton twitter-->
+   <!-- <a class="btn btn-primary m-2" data-bs-toggle="tooltip" data-bs-placement="top" title="Pincha para acceder a mi perfil de twitter" target="_blank" href="https://www.twitter.com/RAYNERPS3235" role="button">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+        <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+      </svg>
+    </a>-->
+<!--Boton correo-->
+    <a class="btn btn-primary m-2" data-bs-toggle="tooltip" data-bs-placement="top" title="Pincha para mandarme un correo" target="_blank" href="mailto:lvrayner@gmail.com" role="button">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+      </svg>
+    </a>
+  </div>
+  <div class="d-flex justify-content-end">
+    <p class="fs-6">©Rayner Gabu 2023</p>
+        </div>
+    </div>
+    
+  </div>
+</footer>
+<!--Instrucciones github
+  Git status
+    Git add . 
+      Git commit -m "NombreCommit"
+        Git push-->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
