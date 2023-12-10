@@ -1,0 +1,14 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Grocesort" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:statusBarColor" tools:targetApi="1">@color/grey</item>
+        <item name="android:navigationBarColor" tools:targetApi="1">@color/grey</item>
+        <!-- Customize your dark theme here. -->
+        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+    </style>
+
+    <style name="ThemeOverlay.Grocesort.FullscreenContainer" parent="">
+        <item name="fullscreenBackgroundColor">@color/grey</item>
+        <item name="fullscreenTextColor">@color/grey</item>
+    </style>
+</resources>
