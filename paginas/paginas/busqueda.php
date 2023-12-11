@@ -17,7 +17,18 @@
     </nav>
     <nav class="mt-5">
     </nav>
-    <section class="py-4 py-xl-5">
+    <section id="sectionSecciones" class="py-4 py-xl-5">
+
+        <div class="d-flex justify-content-center mb-3"  >
+            <u><h1 data-bs-toggle="tooltip1" data-bs-placement="top" title="Secciones encontradas según criterio de búsqueda"  class="pt-1">Secciones</h1></u>
+
+        </div>
+        <script>
+            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip1"]'));
+            var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                return new bootstrap.Tooltip(tooltipTriggerEl);
+            });
+        </script>
         <div class="container-fluid">
         <div class="row row-cols-2 row-cols-sm-2 row-cols-md-2 row-cols-lg-4 row-cols-xl-4 row-cols-xxl-4 justify-content-center" id="rows-1">
         <?php
@@ -70,7 +81,7 @@
                     }
                 } else { if($stmt->rowCount() == 0){ 
                     echo '<script>
-                    document.getElementById("rows-1").style.display = "none";
+                    document.getElementById("sectionSecciones").style.display = "none";
                     </script>';
 
                 } else {}
@@ -108,7 +119,19 @@
     </nav>
     <nav class="mt-5">
     </nav>
+    <hr class="featurette-divider">
     <section class="py-4 py-xl-5">
+
+        <div class="d-flex justify-content-center mb-3" data-bs-toggle="tooltip2" data-bs-placement="top" title="Conjunto de productos dentro de cada sección. [Sección>Subsección]">
+            <u><h1>Subsecciones</h1></u>
+        </div>
+        <script>
+            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip2"]'));
+            var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                return new bootstrap.Tooltip(tooltipTriggerEl);
+            });
+        </script>
+
         <div class="container-fluid">
         <div class="row row-cols-2 row-cols-sm-2 row-cols-md-2 row-cols-lg-4 row-cols-xl-4 row-cols-xxl-4 justify-content-center" id="row-2">
         <?php
@@ -157,7 +180,7 @@
                         <?php
                     }
                 } else {  
-                    echo 'No se encontraron subsecciones con el texto de búsqueda.';
+                   echo '<p style="padding-left: 25%; white-space: nowrap;">No se encontraron subsecciones con el texto de búsqueda.</p>';
                     echo '    <nav class="mb-5">
     </nav>
     <nav class="pb-5">
