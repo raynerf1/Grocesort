@@ -64,7 +64,7 @@
                                    onclick="event.preventDefault(); this.closest('form').submit();">
                                     <div class="card" style="border-style: none;">
                                         <div class="card-body">
-                                            <h1 class="text-start"><?php echo $fila["nombre"]; ?></h1>
+                                            <h1 class="text-start"><?php echo ($fila["nombreutf"] !== null) ? $fila["nombreutf"] : $fila["nombre"]; ?></h1>
                                             <img class="img-fluid order-4 coche"
                                                  src=<?php echo '../imagenes/secciones/' . str_replace(' ', '', strtolower(trim($fila["nombre"]))) . '.jpg' ?>
                                                  width="700px">
@@ -167,7 +167,7 @@
                                    onclick="event.preventDefault(); this.closest('form').submit();">
                                     <div class="card" style="border-style: none;">
                                         <div class="card-body">
-                                            <h1 class="text-start"><?php echo $fila["subseccion"]; ?></h1>
+                                            <h1 class="text-start"><?php echo isset($fila["subseccionutf"]) ? $fila["subseccionutf"] : $fila["subseccion"]; ?></h1>
 
                                                  <img class="img-fluid order-4 coche"
                                                  src="<?php echo $fila["imagen"]; ?>" width="700px">
