@@ -12,14 +12,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
-<div id="div3">
+<div id="div3" class="bg-white">
     <nav class="mt-4">
     </nav>
     <nav class="mt-5">
     </nav>
     <section id="sectionSecciones" class="py-4 py-xl-5">
 
-        <div class="d-flex justify-content-center mb-3"  >
+        <div class="d-flex justify-content-center mb-3 textoOscuro"  >
             <u><h1 data-bs-toggle="tooltip1" data-bs-placement="top" title="Secciones encontradas según criterio de búsqueda"  class="pt-1">Secciones</h1></u>
 
         </div>
@@ -62,7 +62,7 @@
                                 <a class="justify-content-center d-flex align-items-center columna"
                                    href="#"
                                    onclick="event.preventDefault(); this.closest('form').submit();">
-                                    <div class="card" style="border-style: none;">
+                                    <div class="card bg-white textoOscuro" style="border-style: none;">
                                         <div class="card-body">
                                             <h1 class="text-start"><?php echo ($fila["nombreutf"] !== null) ? $fila["nombreutf"] : $fila["nombre"]; ?></h1>
                                             <img class="img-fluid order-4 coche"
@@ -114,7 +114,7 @@
         </div>
     </section>
     <br>
-    <div id="div4">
+    <div id="div4" class="bg-white">
     <nav class="mt-4">
     </nav>
     <nav class="mt-5">
@@ -122,7 +122,7 @@
     <hr class="featurette-divider">
     <section class="py-4 py-xl-5">
 
-        <div class="d-flex justify-content-center mb-3" data-bs-toggle="tooltip2" data-bs-placement="top" title="Conjunto de productos dentro de cada sección. [Sección>Subsección]">
+        <div class="d-flex justify-content-center mb-3 textoOscuro" data-bs-toggle="tooltip2" data-bs-placement="top" title="Conjunto de productos dentro de cada sección. [Sección>Subsección]">
             <u><h1>Subsecciones</h1></u>
         </div>
         <script>
@@ -165,7 +165,7 @@
                                 <a class="justify-content-center d-flex align-items-center columna"
                                    href="#"
                                    onclick="event.preventDefault(); this.closest('form').submit();">
-                                    <div class="card" style="border-style: none;">
+                                    <div class="card bg-white textoOscuro" style="border-style: none;">
                                         <div class="card-body">
                                             <h1 class="text-start"><?php echo isset($fila["subseccionutf"]) ? $fila["subseccionutf"] : $fila["subseccion"]; ?></h1>
 
@@ -233,7 +233,81 @@
     <nav class="pb-5">
     </nav>
 </div>
-</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        aplicarEstilos();
 
-</div>
+    });
+
+function getCookie(nombre) {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${nombre}=`);
+    
+    if (parts.length === 2) {
+        return parts.pop().split(';').shift();
+    }
+    
+    return null;
+}
+
+// Obtén el valor de la cookie
+var modo = getCookie('TemaModo');
+var FCookies = getCookie('FormularioCookies');
+
+// Si la cookie está vacía, establece el valor predeterminado y actualiza la cookie
+if (!modo && FCookies === "Si") {
+    modo = "claro";
+    document.cookie = "TemaModo=claro; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
+}
+
+// Función para aplicar estilos según el modo
+function aplicarEstilos() {
+    if (modo === "oscuro") {
+        $('.bg-white').removeClass('bg-white').addClass('bg-dark');
+        $('.textoOscuro').removeClass('textoOscuro').addClass('text-white');
+        $('#modoTexto').text('Oscuro');
+        $('#modoIcono').show(); // Muestra el icono
+        modo = "oscuro";
+    } else {
+        $('.bg-dark').removeClass('bg-dark').addClass('bg-white');
+        $('.text-white').removeClass('text-white').addClass('textoOscuro');
+        $('#modoTexto').text('Claro');
+        $('#modoIcono').show(); // Muestra el icono
+        modo = "claro";
+    }
+}
+
+// Llama a la función para aplicar estilos al cargar la página
+
+
+// Función para cambiar los estilos y actualizar la cookie
+function cambiarEstilos() {
+    var textoModoBoton = document.getElementById("cambiarEstilos");
+
+    if (modo == "claro") {        
+        $('.bg-white').removeClass('bg-white').addClass('bg-dark');
+        $('.textoOscuro').removeClass('textoOscuro').addClass('text-white');
+        textoModoBoton.firstChild.nodeValue = '';
+        modo = "oscuro";
+    } else {
+        $('.bg-dark').removeClass('bg-dark').addClass('bg-white');
+        $('.text-white').removeClass('text-white').addClass('textoOscuro');
+        textoModoBoton.firstChild.nodeValue = "";
+        modo = "claro";
+    }
+
+    // Actualiza el valor de la cookie con el nuevo modo
+    document.cookie = "TemaModo=" + modo + "; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
+    aplicarEstilos(); // Llama a la función para aplicar estilos después de cambiarlos
+}
+
+
+    $(document).ready(function () {
+        // Asigna la función al evento click del botón
+        $('#cambiarEstilos').click(cambiarEstilos);
+    });
+
+</script>
+</body>
 </html>
