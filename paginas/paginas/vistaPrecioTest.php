@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 <!--Vista precio test-->
-<html data-bs-theme="light" lang="en">
+<html data-bs-theme="light" lang="es">
 
 <head>
     <meta charset="utf-8">
@@ -40,7 +40,7 @@
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-link" aria-current="page" href="../../index.html">Inicio</a>
+        <a class="nav-link" aria-current="page" href="secciones.php">Secciones</a>
         <a class="nav-link" href="sobremi/index.html">Sobre mí</a>
         <a class="nav-link" href="privacidad.html">Privacidad</a>
         
@@ -50,7 +50,7 @@
                 $cantidadElementos = count($carro);?>
                 <a class="nav-link" href="carro.php">
     <button type="button" class="btn btn-primary ml-5" <?php if ($_COOKIE["FormularioCookies"] === 'No'){echo 'style="display: none"';}  ?>>
-        Cesta<span class="badge text-bg-secondary"><?php echo $cantidadElementos;?></span>
+        Lista<span class="badge text-bg-secondary"><?php echo $cantidadElementos;?></span>
     </button>
 </a>
               </div>
@@ -2237,7 +2237,7 @@ if (isset($_POST['nombre_subseccion'])) {
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/Animated-Pretty-Product-List-v12-Animated-Pretty-Product-List.js"></script>
 
-    <footer id="footer" class="text-center bg-dark">
+    <footer id="footer" class="text-center bg-black">
         <div class="container text-white py-4 py-lg-5">
         <li class="list-inline-item me-4"><a class="link-light" href="sobremi/index.html" target="_blank" content="no-referrer" rel="noreferrer">Sobre el desarrollador</a></li> <br>
         <li id="androidTest" class="list-inline-item me-4"><a class="link-light" href="../../android/apk/grocesort.apk" content="no-referrer" rel="noreferrer" download>Descargar aplicación Android</a></li>
