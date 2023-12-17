@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <!--Carro--->
-<html data-bs-theme="light" lang="en">
+<html data-bs-theme="light" lang="es">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Carro</title>
+    <title>Lista de la compra - Grocesort</title>
         <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/css/styles.min.css">
     <link rel="stylesheet" href="../assets/css/preloader.css">
@@ -147,13 +147,7 @@ $total = 0;
                   </th>
                   <td class="border-0 align-middle"><strong><?php echo number_format($total, 2); ?>€</strong></td>
                   <td class="border-0 align-middle">
-
-
-
-
-                  <td class="border-0 align-middle"><a href="#" class="text-dark">
-</td>
-
+                  <td class="border-0 align-middle"><a href="#" class="text-dark"></td>
                 </tr>
 
               </tbody>
@@ -169,7 +163,7 @@ $total = 0;
 </div>
 </div>
     <script src="carroassets/bootstrap/js/bootstrap.min.js"></script>
-    <footer id="footer" class="text-center bg-dark">
+    <footer id="footer" class="text-center bg-black">
         <div class="container text-white py-4 py-lg-5">
         <li class="list-inline-item me-4"><a class="link-light" href="sobremi/index.html" target="_blank" content="no-referrer" rel="noreferrer">Sobre el desarrollador</a></li> <br>
         <li id="androidTest" class="list-inline-item me-4"><a class="link-light" href="../../android/apk/grocesort.apk" content="no-referrer" rel="noreferrer" download>Descargar aplicación Android</a></li>
