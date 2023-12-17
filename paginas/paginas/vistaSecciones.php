@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <!--Vista secciones-->
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Grocesort by Rayner</title>
-    <title>SportsStickerSpotter - Equipos</title>
     <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/css/styles.min.css">
     <link rel="stylesheet" href="../assets/css/preloader.css">
@@ -33,7 +32,6 @@
 <link rel="icon" href="https://cdn.discordapp.com/attachments/1166363443637518346/1181710546878337146/GS_Logo.png?ex=65820cb5&is=656f97b5&hm=ed861c8c0bc3f030314a66d50da7e1cd14a9f4f97917927f63252dc64379481f&">
 </head>
 <body>
-<header>
     <header>
         <nav class="navbar navbar-expand-lg bg-light fixed-top">
   <div class="container-fluid">
@@ -45,9 +43,16 @@
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-link" aria-current="page" href="../../index.html">Inicio</a>
+        <a class="nav-link" aria-current="page" href="secciones.php">Secciones</a>
         <a class="nav-link" href="sobremi/index.html">Sobre mí</a>
         <a class="nav-link" href="privacidad.html">Privacidad</a>
+        <!--
+        <a class="nav-link" id="cambiarEstilos" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Cambiar modo de color de la página" style="cursor: pointer; <?php if ($_COOKIE["FormularioCookies"] === 'No'){echo 'display: none';}  ?>"
+    <span id="modoTexto"></span>
+    <svg xmlns="http://www.w3.org/2000/svg"  width="16" height="16" fill="currentColor" class="bi bi-brightness-high-fill" viewBox="0 0 16 16" id="modoIcono">
+        <path d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+    </svg>
+</a>-->
         
       </div>
                 <?php 
@@ -55,7 +60,7 @@
                 $cantidadElementos = count($carro);?>
                 <a class="nav-link" href="carro.php">
     <button type="button" class="btn btn-primary ml-5" <?php if ($_COOKIE["FormularioCookies"] === 'No'){echo 'style="display: none"';}  ?>>
-        Cesta<span class="badge text-bg-secondary"><?php echo $cantidadElementos;?></span>
+        Lista<span class="badge text-bg-secondary"><?php echo $cantidadElementos;?></span>
     </button>
 </a>
               </div>
@@ -69,7 +74,7 @@
         }
           ?>
           <br>
-          <div class="container-fluid ">
+          <div class="container-fluid">
             <nav class=" ms-5 mt-5 " aria-label="breadcrumb">
               <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="secciones.php">Secciones</a></li>
@@ -81,7 +86,7 @@
     </header>
 
 
-<div id="div3">
+<div id="div3" class="bg-white">
 
     <section class="py-4 py-xl-5">
         <div class="container-fluid">
@@ -117,7 +122,7 @@
                                 <a class="justify-content-center d-flex align-items-center columna"
                                    href="#"
                                    onclick="event.preventDefault(); this.closest('form').submit();">
-                                    <div class="card" style="border-style: none;">
+                                    <div class="card bg-white textoOscuro" style="border-style: none;">
                                         <div class="card-body">
                                             <h1 class="text-start"><?php echo isset($fila["subseccionutf"]) ? $fila["subseccionutf"] : $fila["subseccion"]; ?></h1>
                                             <img class="img-fluid order-4 coche"
@@ -172,8 +177,8 @@
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <footer id="footer" class="text-center bg-dark" style="display: block;">
-        <div class="container text-white py-4 py-lg-5">
+    <footer id="footer" class="text-center bg-black" style="display: block;">
+        <div class="container text-light py-4 py-lg-5">
         <li class="list-inline-item me-4"><a class="link-light" href="sobremi/index.html" target="_blank" content="no-referrer" rel="noreferrer">Sobre el desarrollador</a></li> <br>
         <li id="androidTest" class="list-inline-item me-4"><a class="link-light" href="../../android/apk/grocesort.apk" content="no-referrer" rel="noreferrer" download>Descargar aplicación Android</a></li>
             <ul class="list-inline">
@@ -183,5 +188,82 @@
             <p style="font-family: 'font-awesome', sans-serif;">Desarrollado por Rayner Gabú<br>GroceSort<br>©2023&nbsp;</p>
         </div>
     </footer>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        aplicarEstilos();
+
+    });
+
+function getCookie(nombre) {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${nombre}=`);
+    
+    if (parts.length === 2) {
+        return parts.pop().split(';').shift();
+    }
+    
+    return null;
+}
+
+// Obtén el valor de la cookie
+var modo = getCookie('TemaModo');
+var FCookies = getCookie('FormularioCookies');
+
+// Si la cookie está vacía, establece el valor predeterminado y actualiza la cookie
+if (!modo && FCookies === "Si") {
+    modo = "claro";
+    document.cookie = "TemaModo=claro; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
+}
+
+// Función para aplicar estilos según el modo
+function aplicarEstilos() {
+    if (modo === "oscuro") {
+        $('.bg-white').removeClass('bg-white').addClass('bg-dark');
+        $('.textoOscuro').removeClass('textoOscuro').addClass('text-white');
+        $('#modoTexto').text('Oscuro');
+        $('#modoIcono').show(); // Muestra el icono
+        modo = "oscuro";
+    } else {
+        $('.bg-dark').removeClass('bg-dark').addClass('bg-white');
+        $('.text-white').removeClass('text-white').addClass('textoOscuro');
+        $('#modoTexto').text('Claro');
+        $('#modoIcono').show(); // Muestra el icono
+        modo = "claro";
+    }
+}
+
+// Llama a la función para aplicar estilos al cargar la página
+
+
+// Función para cambiar los estilos y actualizar la cookie
+function cambiarEstilos() {
+    var textoModoBoton = document.getElementById("cambiarEstilos");
+
+    if (modo == "claro") {        
+        $('.bg-white').removeClass('bg-white').addClass('bg-dark');
+        $('.textoOscuro').removeClass('textoOscuro').addClass('text-white');
+        textoModoBoton.firstChild.nodeValue = 'Oscuro';
+        modo = "oscuro";
+    } else {
+        $('.bg-dark').removeClass('bg-dark').addClass('bg-white');
+        $('.text-white').removeClass('text-white').addClass('textoOscuro');
+        textoModoBoton.firstChild.nodeValue = "Claro";
+        modo = "claro";
+    }
+
+    // Actualiza el valor de la cookie con el nuevo modo
+    document.cookie = "TemaModo=" + modo + "; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
+    aplicarEstilos(); // Llama a la función para aplicar estilos después de cambiarlos
+}
+
+
+    $(document).ready(function () {
+        // Asigna la función al evento click del botón
+        $('#cambiarEstilos').click(cambiarEstilos);
+    });
+
+</script>
 </body>
 </html>
