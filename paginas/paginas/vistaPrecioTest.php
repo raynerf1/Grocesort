@@ -16,6 +16,9 @@
     <link rel="stylesheet" href="../assets/css/preloader.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <style>
         .oculto {
@@ -83,6 +86,22 @@ if (isset($_POST['nombre_subseccion'])) {
             </nav>
           </div>
     </header>
+    <div class="modal fade" id="ModalPrecio" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Historial de precios</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
         <div class="container-fluid">
             <div class="row py-1 py-md-1">
                 <div class="col-12 col-sm-3 col-lg-2">
@@ -1658,6 +1677,21 @@ if (isset($_POST['nombre_subseccion'])) {
                         <div class="input-group d-none d-md-flex mt-3"><input class="form-control" type="text" placeholder="Search..."><button class="btn btn-primary" type="button"><i class="fa fa-search"></i></button></div>
                         -->
                     </div>
+                    <!---->
+                    
+                        <section class="anuncios" style="display: none;">
+                            <br>
+                            <h4>Otras secciones</h4>
+                            <div class="d-flex flex-sm-column flex-row flex-grow-1 align-items-center align-items-sm-start px-3 text-white" style=" padding: 10px 5px 5px 5px ;border-radius: 10px;  background-color: rgb(233, 233, 233);">
+                                <ul id="menu2" class="nav nav-pills flex-sm-column flex-row flex-nowrap flex-shrink-1 flex-sm-grow-0 flex-grow-1 my-3 mb-sm-auto justify-content-center align-items-center align-items-sm-start w-100">
+
+                                    <a href="https://www.raynergrocesort.rf.gd/paginas/paginas/vistaPrecioTest.php?nombre_subseccion=Aceite%20girasol"><li class="text-black ps-3">Aceite oliva</li></a>
+
+                                    <li class="text-black ps-3">Test</li>
+                                    
+                            </div>
+                        </section>
+                    <!---->
                 </div>
 
                 <div class="col-12 col-sm-9 col-sm-9">
@@ -1835,7 +1869,7 @@ if (isset($_POST['nombre_subseccion'])) {
                                     </div>
                                     <div class="row">
                                         <div class="col-8">
-                                            <h2><a href="#"><?php echo $fila["producto"];?><?php switch ($fila["producto"]){ 
+                                            <h2><a class="ModalTrigger"><?php echo $fila["producto"];?><?php switch ($fila["producto"]){ 
                                                 case 'Muesli':
                                                  echo " solo"; 
                                                 break; 
@@ -1917,6 +1951,7 @@ if (isset($_POST['nombre_subseccion'])) {
                                         </div>
                                         <div class="col-4"><img src="..\imagenes\supermercados\iconos/<?php echo str_replace(' ', '', strtolower($fila["supermercado"])); ?>.png" style="max-width: 100%;"></div>
                                     </div>
+
                                     <div class="product-rating"><a class="small-text" ><?php echo $fila["detalle"]; ?><?php echo ' '. $fila["supermercado"]; ?></a></div>
                                     <div class="row">
                                         <div class="col-12">
@@ -3230,7 +3265,31 @@ function ocultarMielFlores() {
         // Llamar al método showAddedToCartToast definido en la interfaz Android
         Android.showAddedToCartToast();
     }
+    document.addEventListener('DOMContentLoaded', function () {
+        const modalTriggers = document.getElementsByClassName('ModalTrigger');
 
+        for (const modalTrigger of modalTriggers) {
+            modalTrigger.addEventListener('click', function () {
+                var myModal = new bootstrap.Modal(document.getElementById('ModalPrecio'));
+                myModal.show();
+            });
+        }
+    });
+          $(document).ready(function () {
+        $('.ModalTrigger').click(function () {
+            // Encuentra el ancestro con el atributo id y obtén su valor
+            var idProducto = $(this).closest('.product-item').attr('id');
+                $.ajax({
+                    url: "historialPrecio.php",
+                    method: "POST",
+                    data: { input: idProducto },
+                    success: function(data) {
+                        $(".modal-body").html(data);
+                    }
+                });
+        });
+    });
     </script>
+
 </body>
 </html>
