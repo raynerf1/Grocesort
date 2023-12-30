@@ -8,10 +8,10 @@ from datetime import date, timedelta
 
 FechaActual=date.today()
 mydb = mysql.connector.connect(
-  host="HOST BASE DE DATOS",
-  user="USUARIO BASE DE DATOS",
-  password="CONTRASEÑA BASE DE DATOS",
-  database='NOMBRE BASE DE DATOS'
+  host="hostingmysql335.nominalia.com",
+  user="grocesort",
+  password="raynergrocesort",
+  database='externalgrocesort'
 )
 mycursor = mydb.cursor()
 driver = webdriver.Firefox()
@@ -876,7 +876,7 @@ def CrearProductos (SupermercadoEnlaces):
     driver.close() 
     driver.quit()
     
-CrearProductos("Mercadona_enlaces.txt")
-#ActualizarPrecios("Mercadona_enlaces.txt")#SupermercadoEnlaces
+#CrearProductos("Mercadona_enlaces.txt")
+ActualizarPrecios("Mercadona_enlaces.txt")#SupermercadoEnlaces
 #Juntar enlaces con lista de productos en un archivo(Lista de productos, Enlaces de los productos, Nombre del fichero con productos y enlaces)
 #JuntarEnlaceProducto("ListaProductos.txt", "Enlaces.txt", "Mercadona_enlaces.txt")#ListaProductos, supermercadoArchivosEnlaces, archivoConEnlacesProductos
