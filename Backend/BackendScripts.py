@@ -8,10 +8,10 @@ from datetime import date, timedelta
 
 FechaActual=date.today()
 mydb = mysql.connector.connect(
-  host="hostingmysql335.nominalia.com",
-  user="grocesort",
-  password="raynergrocesort",
-  database='externalgrocesort'
+  host="HOST BASE DE DATOS",
+  user="USUARIO BASE DE DATOS",
+  password="CONTRASEÑA BASE DE DATOS",
+  database='NOMBRE BASE DE DATOS'
 )
 mycursor = mydb.cursor()
 driver = webdriver.Firefox()
