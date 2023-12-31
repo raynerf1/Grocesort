@@ -58,7 +58,7 @@
 "https://www.compraonline.alcampo.es/products/PRODUCTO-ALCAMPO-Aceite-de-girasol-PRODUCTO-ALCAMPO-botella-de-1-l/19818", [Aceite girasol 1L]
 "Vacio", [Aceite girasol 3L]
 "https://www.compraonline.alcampo.es/products/PRODUCTO-ALCAMPO-Aceite-de-girasol-PRODUCTO-ALCAMPO-garrafa-de-5-l/19821", [Aceite girasol 5L]
-"Vacio", [Aceite de coco bote 500ml]
+"Vacio", [Aceite de coco bote]
 "https://www.compraonline.alcampo.es/products/PRODUCTO-ECON%C3%93MICO-ALCAMPO-Vinagre-de-vino-blanco-PRODUCTO-ECON%C3%93MICO-ALCAMPO-botella-de-1-l/23355", [Vinagre vino blanco]
 "https://www.compraonline.alcampo.es/products/PRODUCTO-ALCAMPO-Vinagre-de-manzana-PRODUCTO-ALCAMPO-1l/206839", [Vinagre manzana]
 "https://www.compraonline.alcampo.es/products/ALCAMPO-GOURMET-Vinagre-bals%C3%A1mico-de-M%C3%B3dena-ALCAMPO-GOURMET-botella-de-500-ml/86301", [Vinagre balsamico modena]
