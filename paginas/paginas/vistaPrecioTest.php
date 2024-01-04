@@ -29,6 +29,7 @@
             }
     </style>
 <link rel="icon" href="https://cdn.discordapp.com/attachments/1166363443637518346/1181710546878337146/GS_Logo.png?ex=65820cb5&is=656f97b5&hm=ed861c8c0bc3f030314a66d50da7e1cd14a9f4f97917927f63252dc64379481f&">
+    <meta name="google-adsense-account" content="ca-pub-8360200834189110">
 </head>
 
 <body>
@@ -174,6 +175,7 @@ if (isset($_POST['nombre_subseccion'])) {
 
 
                              <li class="dropdown w-100"><a id="dropdown" <?php switch ($subseccion){
+                                    case 'Aceite de coco':
                                     case 'Agua':
                                     case 'Arroz largo':
                                     case 'Arroz redondo':
@@ -278,7 +280,7 @@ if (isset($_POST['nombre_subseccion'])) {
                                       <li>
                                         <div class="form-check">
                                           <input class="form-check-input ms-1"  type="checkbox" value="" id="cbGarrafa5L" onclick="ocultarGarrafa5L()" checked>
-                                          <label class="form-check-label ms-1" for="flexCheckChecked"> Garrafa 5L</label>
+                                          <label class="form-check-label ms-1" for="flexCheckChecked"> Garrafas</label>
                                         </div>
                                       </li>
 
@@ -1299,10 +1301,24 @@ if (isset($_POST['nombre_subseccion'])) {
 <ul class="dropdown-menu dropdown-menu-light text-small shadow" aria-labelledby="dropdown">
                                       <li>
                                         <div class="form-check">
+                                          <input class="form-check-input ms-1"  type="checkbox" value="" id="cbAceite04" onclick='ocultarAceiteOV();'  checked>
+                                          <label class="form-check-label ms-1" for="flexCheckChecked"> Aceite oliva virgen</label>
+                                        </div>
+                                      </li>
+
+                                      <li>
+                                        <div class="form-check">
+                                          <input class="form-check-input ms-1"  type="checkbox" value="" id="cbAceite04" onclick='ocultarAceiteOVE();'  checked>
+                                          <label class="form-check-label ms-1" for="flexCheckChecked"> Aceite oliva virgen extra</label>
+                                        </div>
+                                        </li>
+                                      <li>                                      
+                                      <li>
+                                        <div class="form-check">
                                           <input class="form-check-input ms-1"  type="checkbox" value="" id="cbAceite04" onclick='ocultarAceite04();'  checked>
                                           <label class="form-check-label ms-1" for="flexCheckChecked"> Aceite 0,4</label>
                                         </div>
-                                        </li>
+                                      </li>
 
                                       <li>
                                         <div class="form-check">
@@ -1310,7 +1326,7 @@ if (isset($_POST['nombre_subseccion'])) {
                                           <label class="form-check-label ms-1" for="flexCheckChecked"> Aceite 1</label>
                                         </div>
                                         </li>
-                                    <li>
+                                      <li>
                                         <hr class="dropdown-divider">
                                     </li>
                                 </ul>
@@ -1840,7 +1856,15 @@ if (isset($_POST['nombre_subseccion'])) {
                                 <input type="hidden" name="idproducto" value="<?php echo $fila["id"];?>">
                                 <div class="product-container <?php switch ($subseccion){
                                     case 'Aceite oliva':
-                                        echo str_replace(' ', '-', substr($fila["producto"], 0, 15)); 
+                                        //echo str_replace(' ', '-', substr($fila["producto"], 0, 15));
+                                        //echo ($fila["producto"] === "Aceite oliva virgen 1L") ? "AOV1L" : str_replace(' ', '-', substr($fila["producto"], 0, 15));
+                                        echo ($fila["producto"] === "Aceite oliva virgen 1L") ? "AOV1L Aceite-oliva-1l" :
+                                        (($fila["producto"] === "Aceite oliva virgen 3L") ? "AOV3L Aceite-oliva-5l" :
+                                        (($fila["producto"] === "Aceite oliva virgen 5L") ? "AOV5L Aceite-oliva-5l" :
+                                        (($fila["producto"] === "Aceite oliva virgen extra 1L") ? "AOVE1L Aceite-oliva-1l" :
+                                        (($fila["producto"] === "Aceite oliva virgen extra 3L") ? "AOVE3L Aceite-oliva-5l" :
+                                        (($fila["producto"] === "Aceite oliva virgen extra 5L") ? "AOVE5L Aceite-oliva-5l" :
+                                        str_replace(' ', '-', substr($fila["producto"], 0, 15)))))));
                                     break; 
                                     case 'Aceite girasol':
                                         echo str_replace(' ', '-', substr($fila["producto"], 0, 17)); 
@@ -1869,7 +1893,52 @@ if (isset($_POST['nombre_subseccion'])) {
                                     </div>
                                     <div class="row">
                                         <div class="col-8">
-                                            <h2><a class="ModalTrigger"><?php echo $fila["producto"];?><?php switch ($fila["producto"]){ 
+                                        <style>
+                                        @media (min-width: 0px) and (max-width: 575px) {
+                                            #nombreeProductoH3{
+                                            height: 30px;
+                                            }
+                                        }
+                                        @media (min-width: 768px) and (max-width: 1199px) {
+                                            #nombreeProductoH3{
+                                            height: 70px;
+                                            }
+                                        }
+                                        @media (min-width: 1200px) and (max-width: 2160px) {
+                                            #nombreeProductoH3{
+                                            height: 30px;
+                                            }
+                                        }
+                                        </style>
+                                            <h3 id="nombreeProductoH3" style ="font-size: 18px; font-weight: 800;" ><a class="ModalTrigger" id="nombreeProducto"
+                                            style="cursor: pointer; color: inherit; text-decoration: none;"><?php echo $fila["producto"];?><?php switch                                                   ($fila["producto"]){ 
+                                                case 'Aceite oliva 1l 1':
+                                                 echo "°";
+                                                break;
+                                                case 'Aceite oliva 3l 1':
+                                                 echo "°";
+                                                break;
+                                                case 'Aceite oliva 5l 1':
+                                                 echo "°";
+                                                break;
+                                                case 'Aceite oliva 1l 0,4':
+                                                 echo "°";
+                                                break;
+                                                case 'Aceite oliva 3l 0,4':
+                                                 echo "°";
+                                                break;
+                                                case 'Aceite oliva 5l 0,4':
+                                                 echo "°";
+                                                break;
+                                                case 'Aceite oliva virgen 1L':
+                                                 echo ".";
+                                                break;
+                                                case 'Aceite oliva virgen 3L':
+                                                 echo ".";
+                                                break;
+                                                case 'Aceite oliva virgen 5L':
+                                                 echo ".";
+                                                break;
                                                 case 'Muesli':
                                                  echo " solo"; 
                                                 break; 
@@ -1947,27 +2016,63 @@ if (isset($_POST['nombre_subseccion'])) {
                                                 break;
                                                 
 
-                                    }?></a></h2>
+                                    }?></a></h3>
                                         </div>
                                         <div class="col-4"><img src="..\imagenes\supermercados\iconos/<?php echo str_replace(' ', '', strtolower($fila["supermercado"])); ?>.png" style="max-width: 100%;"></div>
                                     </div>
 
-                                    <div class="product-rating"><a class="small-text" ><?php echo $fila["detalle"]; ?><?php echo ' '. $fila["supermercado"]; ?></a></div>
+                                    <div class="product-rating d-block d-sm-none d-md-none d-lg-none d-xl-none d-xxl-block"><a class="small-text" ><?php echo $fila["detalle"]; ?><?php echo ' '. $fila["supermercado"]; ?></a></div>
                                     <div class="row">
                                         <div class="col-12">
-                                            <p class="product-description" style="height: 40px;"><?php echo $fila["descripcion"]; ?></p>
+                                        <style>
+                                        @media (min-width: 576px) and (max-width: 935px) {
+                                            .product-description {
+                                            padding-top: -30px;
+                                            padding-bottom: 80px;
+                                            }
+                                        }
+                                        </style>
+                                            <p class="product-description pt-0 pt-sm-1 pt-xl-0" style="height: 40px;"><?php echo $fila["descripcion"]; ?></p>
                                             <div class="row">
                                                 <div class="col-6 col-sm-8"><a href="<?php echo $fila["enlace"]; ?>" target="_blank" rel="noreferrer"><button class="btn btn-light" type="button">Comprar ahora</button></a></div>
-                                                <div class="col-6 col-sm-4"><p class="product-price"><?php echo $fila["precio"]; ?>€</p></div>
+                                                <div class="col-6 col-sm-4"><p class="product-price ModalTrigger" style="cursor: pointer;"><?php echo $fila["precio"]; ?>€</p></div>
                                             </div>
                                         </div>
                                         <?php 
                                         if ($_COOKIE["FormularioCookies"] === 'Si') {
                                         ?>
                                         <div class="col-12 pt-1">
-                                            <div class="row">
-                                                <div class="col-6 me-3"><button class="btn btn-light anadirLista" style="padding-left:-40px;" onclick="showAddedToCart()" type="submit">Añadir a cesta</button></div>
+
+                                        <style>
+                                            @media (min-width: 0px) and (max-width: 575px) {
+                                                .anadirLista {
+                                                width: 136px;
+                                                }
+                                            }
+                                            @media (min-width: 1200px) and (max-width: 2160px) {
+                                                .anadirLista {
+                                                width: 136px;
+                                                }
+                                            }
+                                            </style>
+
+
+                                        <div class="row">
+                                            <div class="col-6 col-sm-8">
+                                                <button id="tttest" class="btn btn-light anadirLista" onclick="showAddedToCart()" type="submit">Añadir a lista</button>
                                             </div>
+                                            <div class="col-6 col-sm-4 d-flex justify-content-end">
+                                                <button class="btn btn-light ModalTrigger" id="botonModal" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock-history" viewBox="0 0 16 16">
+  <path d="M8.515 1.019A7 7 0 0 0 8 1V0a8 8 0 0 1 .589.022zm2.004.45a7 7 0 0 0-.985-.299l.219-.976q.576.129 1.126.342zm1.37.71a7 7 0 0 0-.439-.27l.493-.87a8 8 0 0 1 .979.654l-.615.789a7 7 0 0 0-.418-.302zm1.834 1.79a7 7 0 0 0-.653-.796l.724-.69q.406.429.747.91zm.744 1.352a7 7 0 0 0-.214-.468l.893-.45a8 8 0 0 1 .45 1.088l-.95.313a7 7 0 0 0-.179-.483m.53 2.507a7 7 0 0 0-.1-1.025l.985-.17q.1.58.116 1.17zm-.131 1.538q.05-.254.081-.51l.993.123a8 8 0 0 1-.23 1.155l-.964-.267q.069-.247.12-.501m-.952 2.379q.276-.436.486-.908l.914.405q-.24.54-.555 1.038zm-.964 1.205q.183-.183.35-.378l.758.653a8 8 0 0 1-.401.432z"/>
+  <path d="M8 1a7 7 0 1 0 4.95 11.95l.707.707A8.001 8.001 0 1 1 8 0z"/>
+  <path d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5"/>
+</svg></button>
+                                                <!--<p class="product-price ModalTrigger" style="cursor: pointer;">Historial</p>-->
+                                            </div>
+                                            </div>
+
+
+
                                         </div><?php
                                                 } else {}
                                               ?>
@@ -2120,7 +2225,15 @@ if (isset($_POST['nombre_subseccion'])) {
                                 <input type="hidden" name="idproducto" value="<?php echo $fila["id"];?>">
                                 <div class="product-container <?php switch ($subseccion){
                                     case 'Aceite oliva':
-                                        echo str_replace(' ', '-', substr($fila["producto"], 0, 15)); 
+                                        //echo str_replace(' ', '-', substr($fila["producto"], 0, 15));
+                                        //echo ($fila["producto"] === "Aceite oliva virgen 1L") ? "AOV1L" : str_replace(' ', '-', substr($fila["producto"], 0, 15));
+                                        echo ($fila["producto"] === "Aceite oliva virgen 1L") ? "AOV1L Aceite-oliva-1l" :
+                                        (($fila["producto"] === "Aceite oliva virgen 3L") ? "AOV3L Aceite-oliva-5l" :
+                                        (($fila["producto"] === "Aceite oliva virgen 5L") ? "AOV5L Aceite-oliva-5l" :
+                                        (($fila["producto"] === "Aceite oliva virgen extra 1L") ? "AOVE1L Aceite-oliva-1l" :
+                                        (($fila["producto"] === "Aceite oliva virgen extra 3L") ? "AOVE3L Aceite-oliva-5l" :
+                                        (($fila["producto"] === "Aceite oliva virgen extra 5L") ? "AOVE5L Aceite-oliva-5l" :
+                                        str_replace(' ', '-', substr($fila["producto"], 0, 15)))))));
                                     break; 
                                     case 'Aceite girasol':
                                         echo str_replace(' ', '-', substr($fila["producto"], 0, 17)); 
@@ -2145,11 +2258,56 @@ if (isset($_POST['nombre_subseccion'])) {
                                     break;
                                     }?>">
                                     <div class="row" test="<?php echo $subseccion; ?>">
-                                        <div class="col-md-12"><a class="product-image"><img src="<?php echo $fila["imagen"]; ?>"></a></div>
+                                        <div class="col-md-12"><a class="product-image" ><img src="<?php echo $fila["imagen"]; ?>"></a></div>
                                     </div>
                                     <div class="row">
                                         <div class="col-8">
-                                            <h2><a href="#"><?php echo $fila["producto"];?><?php switch ($fila["producto"]){ 
+                                        <style>
+                                        @media (min-width: 0px) and (max-width: 575px) {
+                                            #nombreeProductoH3{
+                                            height: 30px;
+                                            }
+                                        }
+                                        @media (min-width: 768px) and (max-width: 1199px) {
+                                            #nombreeProductoH3{
+                                            height: 70px;
+                                            }
+                                        }
+                                        @media (min-width: 1200px) and (max-width: 2160px) {
+                                            #nombreeProductoH3{
+                                            height: 30px;
+                                            }
+                                        }
+                                        </style>
+                                            <h3 id="nombreeProductoH3" style ="font-size: 18px; font-weight: 800;" ><a class="ModalTrigger" id="nombreeProducto"
+                                            style="cursor: pointer; color: inherit; text-decoration: none;"><?php echo $fila["producto"];?><?php switch                                                   ($fila["producto"]){ 
+                                                case 'Aceite oliva 1l 1':
+                                                 echo "°";
+                                                break;
+                                                case 'Aceite oliva 3l 1':
+                                                 echo "°";
+                                                break;
+                                                case 'Aceite oliva 5l 1':
+                                                 echo "°";
+                                                break;
+                                                case 'Aceite oliva 1l 0,4':
+                                                 echo "°";
+                                                break;
+                                                case 'Aceite oliva 3l 0,4':
+                                                 echo "°";
+                                                break;
+                                                case 'Aceite oliva 5l 0,4':
+                                                 echo "°";
+                                                break;
+                                                case 'Aceite oliva virgen 1L':
+                                                 echo ".";
+                                                break;
+                                                case 'Aceite oliva virgen 3L':
+                                                 echo ".";
+                                                break;
+                                                case 'Aceite oliva virgen 5L':
+                                                 echo ".";
+                                                break;
                                                 case 'Muesli':
                                                  echo " solo"; 
                                                 break; 
@@ -2224,27 +2382,64 @@ if (isset($_POST['nombre_subseccion'])) {
                                                 break;
                                                 case 'Guisantes medianos':
                                                  echo " lata";
-                                                break;                                             
-                                    }?></a></h2>
+                                                break;
+                                                
+
+                                    }?></a></h3>
                                         </div>
                                         <div class="col-4"><img src="..\imagenes\supermercados\iconos/<?php echo str_replace(' ', '', strtolower($fila["supermercado"])); ?>.png" style="max-width: 100%;"></div>
                                     </div>
-                                    <div class="product-rating"><a class="small-text" ><?php echo $fila["detalle"]; ?><?php echo ' '. $fila["supermercado"]; ?></a></div>
+
+                                    <div class="product-rating d-block d-sm-none d-md-none d-lg-none d-xl-none d-xxl-block"><a class="small-text" ><?php echo $fila["detalle"]; ?><?php echo ' '. $fila["supermercado"]; ?></a></div>
                                     <div class="row">
                                         <div class="col-12">
-                                            <p class="product-description" style="height: 40px;"><?php echo $fila["descripcion"]; ?></p>
+                                        <style>
+                                        @media (min-width: 576px) and (max-width: 935px) {
+                                            .product-description {
+                                            padding-top: -30px;
+                                            padding-bottom: 80px;
+                                            }
+                                        }
+                                        </style>
+                                            <p class="product-description pt-0 pt-sm-1 pt-xl-0" style="height: 40px;"><?php echo $fila["descripcion"]; ?></p>
                                             <div class="row">
-                                                <div class="col-6"><a href="<?php echo $fila["enlace"]; ?>" target="_blank" rel="noreferrer"><button class="btn btn-light" type="button">Comprar ahora</button></a></div>
-                                                <div class="col-6"><p class="product-price"><?php echo $fila["precio"]; ?>€</p></div>
+                                                <div class="col-6 col-sm-8"><a href="<?php echo $fila["enlace"]; ?>" target="_blank" rel="noreferrer"><button class="btn btn-light" type="button">Comprar ahora</button></a></div>
+                                                <div class="col-6 col-sm-4"><p class="product-price" style="cursor: pointer;"><?php echo $fila["precio"]; ?>€</p></div>
                                             </div>
                                         </div>
                                         <?php 
                                         if ($_COOKIE["FormularioCookies"] === 'Si') {
                                         ?>
-                                        <div class="col-12">
-                                            <div class="row">
-                                                <div class="col-6 me-3"><button class="btn btn-light anadirLista" style="padding-left:-40px;" onclick="showAddedToCart()" type="submit">Añadir a cesta</button></div>
+                                        <div class="col-12 pt-1">
+
+                                        <style>
+                                            @media (min-width: 0px) and (max-width: 575px) {
+                                                .anadirLista {
+                                                width: 136px;
+                                                }
+                                            }
+                                            @media (min-width: 1200px) and (max-width: 2160px) {
+                                                .anadirLista {
+                                                width: 136px;
+                                                }
+                                            }
+                                            </style>
+
+
+                                        <div class="row">
+                                            <div class="col-6 col-sm-8">
+                                                <button id="tttest" class="btn btn-light anadirLista" onclick="showAddedToCart()" type="submit">Añadir a lista</button>
                                             </div>
+                                            <div class="col-6 col-sm-4 d-flex justify-content-end">
+                                                <button class="btn btn-light ModalTrigger" id="botonModal" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock-history" viewBox="0 0 16 16">
+  <path d="M8.515 1.019A7 7 0 0 0 8 1V0a8 8 0 0 1 .589.022zm2.004.45a7 7 0 0 0-.985-.299l.219-.976q.576.129 1.126.342zm1.37.71a7 7 0 0 0-.439-.27l.493-.87a8 8 0 0 1 .979.654l-.615.789a7 7 0 0 0-.418-.302zm1.834 1.79a7 7 0 0 0-.653-.796l.724-.69q.406.429.747.91zm.744 1.352a7 7 0 0 0-.214-.468l.893-.45a8 8 0 0 1 .45 1.088l-.95.313a7 7 0 0 0-.179-.483m.53 2.507a7 7 0 0 0-.1-1.025l.985-.17q.1.58.116 1.17zm-.131 1.538q.05-.254.081-.51l.993.123a8 8 0 0 1-.23 1.155l-.964-.267q.069-.247.12-.501m-.952 2.379q.276-.436.486-.908l.914.405q-.24.54-.555 1.038zm-.964 1.205q.183-.183.35-.378l.758.653a8 8 0 0 1-.401.432z"/>
+  <path d="M8 1a7 7 0 1 0 4.95 11.95l.707.707A8.001 8.001 0 1 1 8 0z"/>
+  <path d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5"/>
+</svg></button>
+                                                <!--<p class="product-price ModalTrigger" style="cursor: pointer;">Historial</p>-->
+                                            </div>
+                                            </div>
+
                                         </div><?php
                                                 } else {}
                                               ?>
@@ -2353,7 +2548,7 @@ function ocultarElementosPorClase(clase) {
 
     // Recorre los elementos "product-item" y verifica si contienen el texto buscado
     elementosProductItem.forEach(function (productItem) {
-        var h2 = productItem.querySelector("h2 a");
+        var h2 = productItem.querySelector("h3 a");
         var texto = h2.textContent;
         if (texto.includes(textoBuscado)) {
         // Verifica si el elemento está en la lista de elementos ocultados por clase
@@ -2388,7 +2583,7 @@ function ocultarPorFormatoMultiple(textoBuscado1, textoBuscado2) {
 
     // Recorre los elementos "product-item" y verifica si contienen el texto buscado
     elementosProductItem.forEach(function (productItem) {
-        var h2 = productItem.querySelector("h2 a");
+        var h2 = productItem.querySelector("h3 a");
         var texto = h2.textContent;
         if (texto.includes(textoBuscado1) || texto.includes(textoBuscado2)) {
             // Verifica si el elemento está en la lista de elementos ocultados por clase
@@ -2477,6 +2672,16 @@ window.onload = function() {
             }
     }
 }
+    function ocultarGarrafa3L (){
+    var elementos1L = document.getElementsByClassName("Aceite-oliva-3l");
+    for (var i = 0; i < elementos1L.length; i++) {
+        if(elementos1L[i].style.display ==="none"){
+            elementos1L[i].style.display = "block";
+        } else{
+            elementos1L[i].style.display = "none";
+            }
+    }
+}
     function ocultarGarrafa5L (){
     var elementos1L = document.getElementsByClassName("Aceite-oliva-5l");
     for (var i = 0; i < elementos1L.length; i++) {
@@ -2488,6 +2693,23 @@ window.onload = function() {
     }
 }
 
+function ocultarAceiteOV() {<!--Necesita arreglar-->
+    ocultarPorFormatoMultiple('Aceite oliva virgen 5L.', 'Aceite oliva virgen 1L.');
+    ocultarAceiteOV2();
+}
+
+function ocultarAceiteOV2() {<!--Necesita arreglar-->
+    ocultarPorFormatoMultiple('Aceite oliva virgen 3L.', 'RAYNERCODE');
+}
+
+function ocultarAceiteOVE() {<!--Necesita arreglar-->
+    ocultarPorFormatoMultiple('Aceite oliva virgen extra 1L', 'Aceite oliva virgen extra 3L', 'Aceite oliva virgen extra 5L');
+    ocultarAceiteOVE2();
+}
+
+function ocultarAceiteOVE2() {<!--Necesita arreglar-->
+    ocultarPorFormatoMultiple('Aceite oliva virgen extra 5L', 'RAYNERCODE');
+}
 
 function ocultarAceite04() {
     ocultarPorFormatoMultiple('Aceite oliva 1l 0,4', 'Aceite oliva 5l 0,4');
@@ -2502,10 +2724,10 @@ function ocultarAceite1() {
         case 'Aceite girasol':?>
 
     function ocultarBotella1L() {
-    ocultarPorFormato('Aceite girasol 1l');
+    ocultarPorFormato('Aceite girasol 1L');
     }
     function ocultarGarrafa5L() {
-    ocultarPorFormato('Aceite girasol 5l');
+    ocultarPorFormato('Aceite girasol 5L');
     }
     <?php
         break;
@@ -2722,7 +2944,7 @@ function ocultarYogur(textoBuscado) {
 
   // Recorre los elementos "product-item" y verifica si contienen el texto buscado
   elementosProductItem.forEach(function (productItem) {
-    var h2 = productItem.querySelector("h2 a");
+    var h2 = productItem.querySelector("h3 a");
     var texto = h2.textContent;
     // Verifica si el texto coincide con el texto buscado
     if (texto === textoBuscado) {
@@ -2753,7 +2975,7 @@ function ocultarYogurPacks() {
 
   // Recorre los elementos "product-item" y oculta aquellos que no coinciden con el texto buscado
   elementosProductItem.forEach(function (productItem) {
-    var h2 = productItem.querySelector("h2 a");
+    var h2 = productItem.querySelector("h3 a");
     var texto = h2.textContent;
     // Verifica si el texto no coincide con el texto buscado
     if (texto !== 'Yogur griego natural 1kg') {
@@ -2781,7 +3003,7 @@ function ocultarYogurSabor(textosBuscados) {
 
     // Recorre los elementos "product-item" y verifica si contienen alguno de los textos buscados
     elementosProductItem.forEach(function (productItem) {
-        var h2 = productItem.querySelector("h2 a");
+        var h2 = productItem.querySelector("h3 a");
         var texto = h2.textContent;
 
         // Verifica si al menos uno de los textos buscados está contenido en el elemento
@@ -2838,7 +3060,7 @@ function ocultarAlubias(textosBuscados) {
 
     // Recorre los elementos "product-item" y verifica si contienen alguno de los textos buscados
     elementosProductItem.forEach(function (productItem) {
-        var h2 = productItem.querySelector("h2 a");
+        var h2 = productItem.querySelector("h3 a");
         var texto = h2.textContent;
 
         // Verifica si al menos uno de los textos buscados está contenido en el elemento
@@ -3288,6 +3510,21 @@ function ocultarMielFlores() {
                     }
                 });
         });
+
+        $("#botonModal").click(function(event) {
+            event.preventDefault();
+            var idProducto = $(this).closest('.product-item').attr('id');
+            $.ajax({
+                url: "historialPrecio.php",
+                method: "POST",
+                data: { input: idProducto },
+                success: function(data) {
+                    $(".modal-body").html(data);
+                }
+            });
+        });
+           
+
     });
     </script>
 
