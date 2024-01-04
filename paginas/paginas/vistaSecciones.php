@@ -30,6 +30,7 @@
         }
     </style>
 <link rel="icon" href="https://cdn.discordapp.com/attachments/1166363443637518346/1181710546878337146/GS_Logo.png?ex=65820cb5&is=656f97b5&hm=ed861c8c0bc3f030314a66d50da7e1cd14a9f4f97917927f63252dc64379481f&">
+    <meta name="google-adsense-account" content="ca-pub-8360200834189110">
 </head>
 <body>
     <header>
