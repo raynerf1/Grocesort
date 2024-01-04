@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="carroassets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="carroassets/fonts/font-awesome.min.css">
     <link rel="icon" href="https://cdn.discordapp.com/attachments/1166363443637518346/1181710546878337146/GS_Logo.png?ex=65820cb5&is=656f97b5&hm=ed861c8c0bc3f030314a66d50da7e1cd14a9f4f97917927f63252dc64379481f&">
+        <meta name="google-adsense-account" content="ca-pub-8360200834189110">
 </head>
     <?php
 $carro = isset($_COOKIE["carro"]) ? json_decode($_COOKIE["carro"], true) : [];
@@ -44,11 +45,34 @@ $total = 0;
 <div class="px-4 px-lg-0">
 
   <div class="pb-5">
+
+<!--Anuncios-->
+<section class="container text-center ">
+<br>
+ <div class="row">
+    <div class="col d-none d-sm-block">
+<script type="text/javascript">
+	atOptions = {
+		'key' : '4c0d4f2898956848977ae5eb68b46deb',
+		'format' : 'iframe',
+		'height' : 60,
+		'width' : 468,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="//www.topcreativeformat.com/4c0d4f2898956848977ae5eb68b46deb/invoke.js"></scr' + 'ipt>');
+</script>
+    </div>
+ </div>
+</section>
+<!--Anuncios-->
+
+<!--Tabla-->
     <div class="container">
       <div class="row">
         <div class="col-12 p-5 bg-white rounded shadow-sm mb-5">
 
           <!-- Shopping cart table -->
+
           <div class="table-responsive">
             <table class="table">
               <thead>
